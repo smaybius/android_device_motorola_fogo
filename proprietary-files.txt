@@ -1,4 +1,4 @@
-# Unpinned blobs from fogo_g-user 14 U1UFN34M.41-63-1 a35458 release-keys
+# Unpinned blobs from fogo_g-user 14 U1UFNS34M.41-98-3-11 d1a62 release-keys
 
 # ACDB
 vendor/etc/acdbdata/nn_ns_models/candidate__2.7.1.31__3.0.0__eai_1.10_enpu1.pmd
@@ -68,8 +68,8 @@ vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
 # ANT
-lib/com.dsi.ant@1.0.so
-lib64/com.dsi.ant@1.0.so
+system/lib/com.dsi.ant@1.0.so
+system/lib64/com.dsi.ant@1.0.so
 system_ext/lib/com.qualcomm.qti.ant@1.0.so
 system_ext/lib64/com.qualcomm.qti.ant@1.0.so
 vendor/lib/hw/com.dsi.ant@1.0-impl.so
@@ -152,7 +152,7 @@ vendor/lib64/libdlbpreg.so
 vendor/lib64/libsensorndkbridge.so
 
 # Audio configs
-etc/audio_effects.xml
+system/etc/audio_effects.xml
 vendor/etc/audio/audio_policy_configuration.xml
 vendor/etc/a2dp_audio_policy_configuration.xml
 vendor/etc/audio_effects.xml
@@ -181,8 +181,8 @@ vendor/lib64/libqti_vndfwk_detect.so
 vendor/lib64/libsoc_helper.so
 
 # Bluetooth (A2DP)
-lib/vendor.qti.hardware.bluetooth.audio-V1-ndk.so
-lib64/vendor.qti.hardware.bluetooth.audio-V1-ndk.so
+system/lib/vendor.qti.hardware.bluetooth.audio-V1-ndk.so
+system/lib64/vendor.qti.hardware.bluetooth.audio-V1-ndk.so
 system_ext/lib/com.qualcomm.qti.bluetooth_audio@1.0.so
 system_ext/lib/vendor.qti.hardware.bluetooth_audio@2.0.so
 system_ext/lib/vendor.qti.hardware.bluetooth_audio@2.1.so
@@ -236,8 +236,8 @@ vendor/etc/init/android.hardware.boot@1.1-service.rc
 vendor/etc/vintf/manifest/android.hardware.boot@1.1.xml
 
 # Camera
-lib/motorola.hardware.camera.imgtuner@1.0.so
-lib64/motorola.hardware.camera.imgtuner@1.0.so
+system/lib/motorola.hardware.camera.imgtuner@1.0.so
+system/lib64/motorola.hardware.camera.imgtuner@1.0.so
 system_ext/lib/libarcsoft_calibverify_TriCamera.so
 system_ext/lib/libarcsoft_tricam_calibration.so
 system_ext/lib/libarcsoft_tricam_verification.so
@@ -588,8 +588,8 @@ vendor/lib64/libfastcvdsp_stub.so
 vendor/lib64/libfastcvopt.so
 
 # CNE
-lib/vendor.qti.hardware.data.connectionaidl-V1-ndk.so
-lib64/vendor.qti.hardware.data.connectionaidl-V1-ndk.so
+system/lib/vendor.qti.hardware.data.connectionaidl-V1-ndk.so
+system/lib64/vendor.qti.hardware.data.connectionaidl-V1-ndk.so
 system_ext/lib/com.quicinc.cne.api@1.0.so
 system_ext/lib/com.quicinc.cne.api@1.1.so
 system_ext/lib/com.quicinc.cne.constants@1.0.so
@@ -836,32 +836,32 @@ vendor/firmware/evass.mbn
 vendor/firmware/evass.mdt
 
 # Display
-lib/com.motorola.hardware.display.panel-V1-ndk.so
-lib/com.motorola.hardware.display.panel@1.0.so
-lib/com.motorola.hardware.display.panel@1.1.so
-lib/vendor.qti.hardware.display.config-V1-ndk.so
-lib/vendor.qti.hardware.display.config-V10-ndk.so
-lib/vendor.qti.hardware.display.config-V2-ndk.so
-lib/vendor.qti.hardware.display.config-V3-ndk.so
-lib/vendor.qti.hardware.display.config-V4-ndk.so
-lib/vendor.qti.hardware.display.config-V5-ndk.so
-lib/vendor.qti.hardware.display.config-V6-ndk.so
-lib/vendor.qti.hardware.display.config-V7-ndk.so
-lib/vendor.qti.hardware.display.config-V8-ndk.so
-lib/vendor.qti.hardware.display.config-V9-ndk.so
-lib64/com.motorola.hardware.display.panel-V1-ndk.so
-lib64/com.motorola.hardware.display.panel@1.0.so
-lib64/com.motorola.hardware.display.panel@1.1.so
-lib64/vendor.qti.hardware.display.config-V1-ndk.so
-lib64/vendor.qti.hardware.display.config-V10-ndk.so
-lib64/vendor.qti.hardware.display.config-V2-ndk.so
-lib64/vendor.qti.hardware.display.config-V3-ndk.so
-lib64/vendor.qti.hardware.display.config-V4-ndk.so
-lib64/vendor.qti.hardware.display.config-V5-ndk.so
-lib64/vendor.qti.hardware.display.config-V6-ndk.so
-lib64/vendor.qti.hardware.display.config-V7-ndk.so
-lib64/vendor.qti.hardware.display.config-V8-ndk.so
-lib64/vendor.qti.hardware.display.config-V9-ndk.so
+system/lib/com.motorola.hardware.display.panel-V1-ndk.so
+system/lib/com.motorola.hardware.display.panel@1.0.so
+system/lib/com.motorola.hardware.display.panel@1.1.so
+system/lib/vendor.qti.hardware.display.config-V1-ndk.so
+system/lib/vendor.qti.hardware.display.config-V10-ndk.so
+system/lib/vendor.qti.hardware.display.config-V2-ndk.so
+system/lib/vendor.qti.hardware.display.config-V3-ndk.so
+system/lib/vendor.qti.hardware.display.config-V4-ndk.so
+system/lib/vendor.qti.hardware.display.config-V5-ndk.so
+system/lib/vendor.qti.hardware.display.config-V6-ndk.so
+system/lib/vendor.qti.hardware.display.config-V7-ndk.so
+system/lib/vendor.qti.hardware.display.config-V8-ndk.so
+system/lib/vendor.qti.hardware.display.config-V9-ndk.so
+system/lib64/com.motorola.hardware.display.panel-V1-ndk.so
+system/lib64/com.motorola.hardware.display.panel@1.0.so
+system/lib64/com.motorola.hardware.display.panel@1.1.so
+system/lib64/vendor.qti.hardware.display.config-V1-ndk.so
+system/lib64/vendor.qti.hardware.display.config-V10-ndk.so
+system/lib64/vendor.qti.hardware.display.config-V2-ndk.so
+system/lib64/vendor.qti.hardware.display.config-V3-ndk.so
+system/lib64/vendor.qti.hardware.display.config-V4-ndk.so
+system/lib64/vendor.qti.hardware.display.config-V5-ndk.so
+system/lib64/vendor.qti.hardware.display.config-V6-ndk.so
+system/lib64/vendor.qti.hardware.display.config-V7-ndk.so
+system/lib64/vendor.qti.hardware.display.config-V8-ndk.so
+system/lib64/vendor.qti.hardware.display.config-V9-ndk.so
 system_ext/lib/vendor.display.color@1.0.so
 system_ext/lib/vendor.display.color@1.1.so
 system_ext/lib/vendor.display.color@1.2.so
@@ -1321,7 +1321,7 @@ vendor/etc/sap.conf
 vendor/etc/xtwifi.conf
 
 # Health
-lib64/motorola.hardware.health.storage@1.0.so
+system/lib64/motorola.hardware.health.storage@1.0.so
 vendor/bin/hw/android.hardware.health@2.1-service
 vendor/bin/hw/motorola.hardware.health.storage@1.0-service
 vendor/bin/hw/motorola.hardware.health@2.0-service
@@ -1386,19 +1386,19 @@ vendor/lib/hw/local_time.default.so
 vendor/lib64/hw/local_time.default.so
 
 # Media
-etc/seccomp_policy/mediacodec.policy
-lib/libmedia_codeclist.so
-lib/libstagefright_aidl_bufferpool2.so
-lib/libstagefright_bufferpool@2.0.1.so
-lib/libstagefright_codecbase.so
-lib/libstagefright_framecapture_utils.so
-lib/libstagefright_surface_utils.so
-lib64/libmedia_codeclist.so
-lib64/libstagefright_aidl_bufferpool2.so
-lib64/libstagefright_bufferpool@2.0.1.so
-lib64/libstagefright_codecbase.so
-lib64/libstagefright_framecapture_utils.so
-lib64/libstagefright_surface_utils.so
+system/etc/seccomp_policy/mediacodec.policy
+system/lib/libmedia_codeclist.so
+system/lib/libstagefright_aidl_bufferpool2.so
+system/lib/libstagefright_bufferpool@2.0.1.so
+system/lib/libstagefright_codecbase.so
+system/lib/libstagefright_framecapture_utils.so
+system/lib/libstagefright_surface_utils.so
+system/lib64/libmedia_codeclist.so
+system/lib64/libstagefright_aidl_bufferpool2.so
+system/lib64/libstagefright_bufferpool@2.0.1.so
+system/lib64/libstagefright_codecbase.so
+system/lib64/libstagefright_framecapture_utils.so
+system/lib64/libstagefright_surface_utils.so
 system_ext/lib/vendor.qti.hardware.vpp@1.1.so
 system_ext/lib64/vendor.qti.hardware.vpp@1.1.so
 vendor/bin/hw/android.hardware.media.omx@1.0-service
@@ -1524,7 +1524,7 @@ vendor/lib64/se_nq_extn_client.so
 vendor/lib64/vendor.nxp.hardware.nfc@2.0.so
 
 # NFC configs
-etc/libnfc-nci.conf
+system/etc/libnfc-nci.conf
 vendor/etc/libnfc-PN557.conf
 vendor/etc/libnfc-SN220-UICC.conf
 vendor/etc/libnfc-SN220.conf
@@ -2337,8 +2337,8 @@ vendor/etc/init/android.hardware.usb@1.2-service-qti.rc
 vendor/etc/vintf/manifest/android.hardware.usb@1.2-service.xml
 
 # Vibrator
-lib/motorola.hardware.vibrator@1.0.so
-lib64/motorola.hardware.vibrator@1.0.so
+system/lib/motorola.hardware.vibrator@1.0.so
+system/lib64/motorola.hardware.vibrator@1.0.so
 vendor/bin/hw/motorola.hardware.vibrator@1.0-service
 vendor/bin/hw/vendor.qti.hardware.vibrator.service
 vendor/etc/init/motorola.hardware.vibrator@1.0-service.rc
@@ -3281,8 +3281,6 @@ vendor/lib64/motorola.hardware.fdrcontrol@1.2.so
 vendor/lib64/motorola.hardware.fmradio@1.0.so
 vendor/lib64/motorola.hardware.power-V1-ndk_platform.so
 vendor/lib64/qcril_client.so
-vendor/odm/etc/vintf/manifest_dn.xml
-vendor/odm/etc/vintf/manifest_n.xml
 vendor/usr/idc/uinput-fpc.idc
 vendor/usr/idc/uinput_nav.idc
 vendor/usr/keylayout/ReadyForAirRemote_Consumer_Control.kl
