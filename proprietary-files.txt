@@ -867,10 +867,10 @@ vendor/etc/vintf/manifest/android.hardware.graphics.mapper-impl-qti-display.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.display.allocator-service.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.display.composer-service.xml
 vendor/lib/egl/eglSubDriverAndroid.so
-vendor/lib/egl/libEGL_adreno.so
+vendor/lib/egl/libEGL_adreno.so;SYMLINK=vendor/lib/libEGL_adreno.so
 vendor/lib/egl/libGLESv1_CM_adreno.so
-vendor/lib/egl/libGLESv2_adreno.so
-vendor/lib/egl/libq3dtools_adreno.so
+vendor/lib/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib/libGLESv2_adreno.so
+vendor/lib/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib/libq3dtools_adreno.so
 vendor/lib/egl/libq3dtools_esx.so
 vendor/lib/hw/android.hardware.memtrack@1.0-impl.so
 vendor/lib/hw/com.motorola.hardware.display.panel@1.1-impl.so
@@ -880,7 +880,6 @@ vendor/lib/hw/memtrack.default.so
 vendor/lib/hw/vulkan.adreno.so
 vendor/lib/com.motorola.hardware.display.panel@1.0.so
 vendor/lib/com.motorola.hardware.display.panel@1.1.so
-vendor/lib/libEGL_adreno.so
 vendor/lib/libadreno_utils.so
 vendor/lib/libdisplaydebug.so
 vendor/lib/libdisplayqos.so
@@ -940,10 +939,10 @@ vendor/lib/vendor.qti.hardware.display.mapperextensions@1.1.so
 vendor/lib/vendor.qti.hardware.display.mapperextensions@1.2.so
 vendor/lib/vendor.qti.hardware.display.mapperextensions@1.3.so
 vendor/lib64/egl/eglSubDriverAndroid.so
-vendor/lib64/egl/libEGL_adreno.so
+vendor/lib64/egl/libEGL_adreno.so;SYMLINK=vendor/lib64/libEGL_adreno.so
 vendor/lib64/egl/libGLESv1_CM_adreno.so
-vendor/lib64/egl/libGLESv2_adreno.so
-vendor/lib64/egl/libq3dtools_adreno.so
+vendor/lib64/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib64/libGLESv2_adreno.so
+vendor/lib64/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib64/libq3dtools_adreno.so
 vendor/lib64/egl/libq3dtools_esx.so
 vendor/lib64/hw/android.hardware.memtrack@1.0-impl.so
 vendor/lib64/hw/com.motorola.hardware.display.panel@1.1-impl.so
@@ -958,7 +957,6 @@ vendor/lib64/com.motorola.hardware.display.touch@1.1.so
 vendor/lib64/com.motorola.hardware.display.touch@1.2.so
 vendor/lib64/com.motorola.hardware.display.touch@1.3.so
 vendor/lib64/com.motorola.hardware.display.touch@1.4.so
-vendor/lib64/libEGL_adreno.so
 vendor/lib64/libadreno_utils.so
 vendor/lib64/libdisplaydebug.so
 vendor/lib64/libdisplayqos.so
@@ -2830,7 +2828,6 @@ vendor/lib/libApeSwDec.so
 vendor/lib/libC2D2.so
 vendor/lib/libCB.so
 vendor/lib/libFlacSwDec.so
-vendor/lib/libGLESv2_adreno.so
 vendor/lib/libGPreqcancel.so
 vendor/lib/libGPreqcancel_svc.so
 vendor/lib/libI420colorconvert.so
@@ -2937,7 +2934,6 @@ vendor/lib/libportrait_repair_ppl3_ocl.so
 vendor/lib/libpowercallback.so
 vendor/lib/libpowercore.so
 vendor/lib/libpsi.so
-vendor/lib/libq3dtools_adreno.so
 vendor/lib/libqc2colorconvertfilter.so
 vendor/lib/libqc2filter.so
 vendor/lib/libqcci_legacy.so
@@ -3031,7 +3027,6 @@ vendor/lib64/libApeSwDec.so
 vendor/lib64/libC2D2.so
 vendor/lib64/libCB.so
 vendor/lib64/libFlacSwDec.so
-vendor/lib64/libGLESv2_adreno.so
 vendor/lib64/libGPreqcancel.so
 vendor/lib64/libGPreqcancel_svc.so
 vendor/lib64/libI420colorconvert.so
@@ -3143,7 +3138,6 @@ vendor/lib64/libpowercallback.so
 vendor/lib64/libpowercore.so
 vendor/lib64/libprekill.so
 vendor/lib64/libpsi.so
-vendor/lib64/libq3dtools_adreno.so
 vendor/lib64/libqc2colorconvertfilter.so
 vendor/lib64/libqc2filter.so
 vendor/lib64/libqcci_legacy.so
