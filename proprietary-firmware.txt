@@ -1,0 +1,3 @@
+BTFM.bin:bluetooth.img;AB
+dspso.bin:dsp.img;AB
+logo.bin:logo.img;AB
