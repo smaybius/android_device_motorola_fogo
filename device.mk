@@ -122,6 +122,10 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     init.recovery.qcom.rc \
 
+# Sensors
+PRODUCT_PACKAGES += \
+    sensors.fogo
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_VENDOR_RAMDISK_OUT)/first_stage_ramdisk/fstab.qcom
 
