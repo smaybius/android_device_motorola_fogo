@@ -29,8 +29,16 @@ namespace_imports = [
     'vendor/qcom/opensource/display',
 ]
 
+
+libs_add_vendor_suffix = (
+)
+
+def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
+    return f'{lib}_{partition}' if partition == 'vendor' else None
+
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
+    libs_add_vendor_suffix: lib_fixup_vendor_suffix,
 }
 
 blob_fixups: blob_fixups_user_type = {
