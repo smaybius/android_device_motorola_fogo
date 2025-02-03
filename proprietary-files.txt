@@ -2069,7 +2069,6 @@ vendor/bin/boringssl_self_test64
 vendor/bin/capsense_reset
 vendor/bin/ccid_daemon_nr
 vendor/bin/charge_only_mode
-vendor/bin/checkpoint_gc
 vendor/bin/cnss_diag
 vendor/bin/cplay
 vendor/bin/ctrlapp_dut
