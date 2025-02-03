@@ -968,10 +968,6 @@ vendor/etc/init/android.hardware.dumpstate@1.1-service.moto.rc
 vendor/etc/vintf/manifest/android.hardware.dumpstate@1.1-service.moto.xml
 
 # Face
-vendor/bin/hw/android.hardware.biometrics.face@1.0-service.face-isv
-vendor/bin/hw/android.hardware.biometrics.face@1.0-service.faceauth
-vendor/etc/init/android.hardware.biometrics.face@1.0-service.face.rc
-vendor/etc/init/android.hardware.biometrics.face@1.0-service.faceauth.rc
 vendor/lib/libcamera2ndk_vendor.so
 vendor/lib64/libcamera2ndk_vendor.so
 vendor/lib64/vendor.qti.hardware.secureprocessor.common@1.0-helper.so
