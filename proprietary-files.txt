@@ -1314,7 +1314,6 @@ vendor/lib64/hw/vendor.qti.hardware.eid@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.eid@1.0.so
 
 # Perf
-
 vendor/bin/hw/vendor.qti.hardware.perf@2.2-service
 vendor/etc/init/vendor.qti.hardware.perf@2.2-service.rc
 vendor/etc/perf/commonresourceconfigs.xml
@@ -1358,25 +1357,12 @@ vendor/etc/pwr/PowerFeatureConfig.xml
 vendor/etc/pwr/VideoPowerOptFeature.xml
 
 # QCC
-
-
-
-
-
-
-
-
-
 vendor/lib/vendor.qti.hardware.qccsyshal@1.0.so
 vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
 
 # QESD
 
 # QSPM
-
-
-
-
 vendor/bin/vendor.qti.qspmhal@1.0-service
 vendor/etc/init/vendor.qti.qspmhal@1.0-service.rc
 vendor/etc/seccomp_policy/qspm.policy
@@ -1387,10 +1373,7 @@ vendor/lib64/vendor.qti.qspmhal@1.0.so
 
 # QXR
 
-
 # Radio
-
-
 vendor/app/IWlanService/IWlanService.apk
 vendor/bin/hw/qcrilNrd
 vendor/bin/ATFWD-daemon
@@ -1586,7 +1569,6 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 
 # Radio (IMS)
-
 vendor/bin/ims_rtp_daemon
 vendor/etc/init/ims_rtp_daemon.rc
 vendor/etc/seccomp_policy/imsrtp.policy
@@ -1980,20 +1962,6 @@ vendor/etc/wifi/wpa_supplicant.conf
 vendor/etc/wifi/wpa_supplicant_overlay.conf
 
 # Wi-Fi Display
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 vendor/bin/wfdhdcphalservice
 vendor/bin/wfdvndservice
 vendor/bin/wifidisplayhalservice
