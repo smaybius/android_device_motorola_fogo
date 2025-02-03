@@ -1,7 +1,6 @@
 import os
 
 # Finds in proprietary-files.txt what's already defined in LineageOS.
-
 def find_duplicates(proprietary_files, search_path, exclude_dirs=None, exclude_files=None):
     if exclude_dirs is None:
         exclude_dirs = []
