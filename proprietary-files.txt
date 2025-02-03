@@ -65,9 +65,7 @@ vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
 # ANT
 vendor/lib/hw/com.dsi.ant@1.0-impl.so
-vendor/lib/com.dsi.ant@1.0.so
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so
-vendor/lib64/com.dsi.ant@1.0.so
 
 # Atrace
 vendor/bin/hw/android.hardware.atrace@1.0-service
@@ -1107,7 +1105,6 @@ vendor/bin/ipacm
 vendor/bin/ipacm-diag
 vendor/etc/init/ipacm-diag.rc
 vendor/etc/init/ipacm.rc
-vendor/etc/IPACM_cfg.xml
 vendor/lib64/libipanat.so
 vendor/lib64/libnetfilter_conntrack.so
 vendor/lib64/libnfnetlink.so
@@ -2251,7 +2248,6 @@ vendor/etc/gpfspath_oem_config.xml
 vendor/etc/init.qti.fm.sh
 vendor/etc/msm_irqbalance.conf
 vendor/etc/nfc_calibration.txt
-vendor/etc/public.libraries.txt
 vendor/etc/qguard.json
 vendor/etc/sec_config
 vendor/etc/simlock_template.dat
