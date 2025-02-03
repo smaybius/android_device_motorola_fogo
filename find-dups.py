@@ -32,10 +32,10 @@ def find_duplicates(proprietary_files, search_path, exclude_dirs=None, exclude_f
             # Exclude specified files
             if file_name in exclude_files:
                 continue
-            # Check if the file name is in the proprietary dictionary
+            # Check if the file name is in the proprietary dictionary as a whole word
             if file_name in proprietary_files_dict:
                 for prop_path in proprietary_files_dict[file_name]:
-                    if file_path != prop_path and file_name in file_path:
+                    if file_path != prop_path:
                         duplicates.append((file_path, prop_path))
 
     return duplicates

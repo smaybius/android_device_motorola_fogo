@@ -2011,7 +2011,6 @@ vendor/bin/diag_mdlog-getlogs
 vendor/bin/diag_mdlog-wrap
 vendor/bin/diag_socket_log
 vendor/bin/diag_uart_log
-vendor/bin/dumpsys
 vendor/bin/e_loop
 vendor/bin/embmsslServer
 vendor/bin/expat
