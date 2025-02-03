@@ -1926,7 +1926,6 @@ vendor/etc/vintf/manifest/android.hardware.usb@1.2-service.xml
 
 # Vibrator
 vendor/bin/hw/motorola.hardware.vibrator@1.0-service
-vendor/bin/hw/vendor.qti.hardware.vibrator.service
 vendor/etc/init/motorola.hardware.vibrator@1.0-service.rc
 vendor/etc/init/vendor.qti.hardware.vibrator.service.rc
 vendor/etc/vintf/manifest/vendor.qti.hardware.vibrator.service.xml
@@ -1937,7 +1936,6 @@ vendor/lib64/hw/motorola.hardware.vibrator@1.0-impl.so
 vendor/lib64/hw/vibrator.default.so
 vendor/lib64/libqtivibratoreffect.so
 vendor/lib64/motorola.hardware.vibrator@1.0.so
-vendor/lib64/vendor.qti.hardware.vibrator.impl.so
 
 # Wi-Fi
 vendor/bin/hw/android.hardware.wifi@1.0-service

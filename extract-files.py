@@ -42,8 +42,6 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
-    ('vendor/lib64/vendor.qti.hardware.vibrator.impl.so', 'vendor/bin/hw/vendor.qti.hardware.vibrator.service'): blob_fixup()
-        .replace_needed('android.hardware.vibrator-V1-ndk.so', 'android.hardware.vibrator-V2-ndk.so'),
 }  # fmt: skip
 
 extract_fns: extract_fns_user_type = {
