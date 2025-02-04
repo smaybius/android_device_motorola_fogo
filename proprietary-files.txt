@@ -1292,6 +1292,7 @@ vendor/lib/libconfigdb.so
 vendor/lib/libdsi_netctrl.so
 vendor/lib/liblog_vendor.so
 vendor/lib/liblqe.so
+vendor/lib/libmdmcutback.so
 vendor/lib/libmotext_inf.so
 vendor/lib/libnetmgr.so
 vendor/lib/libnetmgr_common.so
@@ -1345,6 +1346,7 @@ vendor/lib64/libconfigdb.so
 vendor/lib64/libdsi_netctrl.so
 vendor/lib64/liblog_vendor.so
 vendor/lib64/liblqe.so
+vendor/lib64/libmdmcutback.so
 vendor/lib64/libmotext_inf.so
 vendor/lib64/libnetmgr.so
 vendor/lib64/libnetmgr_common.so
