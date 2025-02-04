@@ -25,7 +25,7 @@ def find_local_module_matches(root_dir, proprietary_files_path, skip_dirs):
             if filename == 'Android.mk':
                 with open(os.path.join(dirpath, filename), 'r') as file:
                     for line in file:
-                        if 'LOCAL_MODULE :=' in line:
+                        if 'LOCAL_MODULE :=' in line or 'LOCAL_MODULE:=' in line:
                             local_module = line.split(':=')[1].strip()
                             for prop_file, prop_file_base in zip(proprietary_files, proprietary_files_base):
                                 if local_module == prop_file_base:
@@ -37,11 +37,11 @@ def main():
     root_dir = '../../../'
     proprietary_files_path = 'proprietary-files.txt'
     skip_dirs = [
-        'device', 'vendor/motorola/fogo', 'out', 'vendor', 'hardware/qcom-caf/msm8953', 'hardware/qcom-caf/msm8996',
+        'device/', 'vendor/motorola/fogo', 'out/', '.repo/', 'hardware/qcom-caf/msm8953', 'hardware/qcom-caf/msm8996',
         'hardware/qcom-caf/msm8998', 'hardware/qcom-caf/sdm660', 'hardware/qcom-caf/sdm845', 'hardware/qcom-caf/sm8150',
         'hardware/qcom-caf/sm8250', 'hardware/qcom-caf/sm8350', 'hardware/qcom-caf/sm8450', 'hardware/qcom-caf/sm8550',
         'hardware/qcom/sdm845', 'hardware/qcom/sm7250', 'hardware/qcom/sm8150', 'hardware/qcom/media/msm8996',
-        'hardware/qcom/media/msm8998', 'hardware/qcom/gps/msm8996', 'hardware/qcom/gps/msm8998'
+        'hardware/qcom/media/msm8998', 'hardware/qcom/gps/msm8996', 'hardware/qcom/gps/msm8998', 'hardware/qcom/data/ipacfg-mgr/msm8998/'
     ]
     # Convert skip_dirs to absolute paths
     skip_dirs = [os.path.abspath(os.path.join(root_dir, d)) for d in skip_dirs]

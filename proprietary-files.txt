@@ -83,27 +83,21 @@ vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libdlbvol.so
 vendor/lib/soundfx/libmmieffectswrapper.so
 vendor/lib/soundfx/libqcbassboost.so
-vendor/lib/soundfx/libqcomvisualizer.so
-vendor/lib/soundfx/libqcomvoiceprocessing.so
 vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
 vendor/lib/soundfx/libshoebox.so
 vendor/lib/soundfx/libspeakerbundle.so
 vendor/lib/soundfx/libswdap.so
 vendor/lib/soundfx/libswgamedap.so
-vendor/lib/soundfx/libvolumelistener.so
 vendor/lib/libdlbpreg.so
 vendor/lib64/soundfx/libasphere.so
 vendor/lib64/soundfx/libdlbvol.so
 vendor/lib64/soundfx/libqcbassboost.so
-vendor/lib64/soundfx/libqcomvisualizer.so
-vendor/lib64/soundfx/libqcomvoiceprocessing.so
 vendor/lib64/soundfx/libqcreverb.so
 vendor/lib64/soundfx/libqcvirt.so
 vendor/lib64/soundfx/libshoebox.so
 vendor/lib64/soundfx/libswdap.so
 vendor/lib64/soundfx/libswgamedap.so
-vendor/lib64/soundfx/libvolumelistener.so
 vendor/lib64/libdlbpreg.so
 
 # Audio configs
@@ -1314,7 +1308,6 @@ vendor/lib/libqdi.so
 vendor/lib/libqdp.so
 vendor/lib/libqmi_csi.so
 vendor/lib/libqmimotext.so
-vendor/lib/libqsap_sdk.so
 vendor/lib/libqsocket.so
 vendor/lib/libril-db.so
 vendor/lib/libril-qcril-hook-oem.so
@@ -1369,7 +1362,6 @@ vendor/lib64/libqdi.so
 vendor/lib64/libqdp.so
 vendor/lib64/libqmi_csi.so
 vendor/lib64/libqmimotext.so
-vendor/lib64/libqsap_sdk.so
 vendor/lib64/libqsocket.so
 vendor/lib64/libril-db.so
 vendor/lib64/libril-qcril-hook-oem.so
