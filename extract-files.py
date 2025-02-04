@@ -27,7 +27,7 @@ namespace_imports = [
     "vendor/qcom/opensource/commonsys-intf/display",
     "vendor/qcom/opensource/dataservices",
     'vendor/qcom/opensource/display',
-    "hardware/qcom/wlan/wcn6740",
+    "hardware/qcom/wlan/wcn6740"
 ]
 
 
