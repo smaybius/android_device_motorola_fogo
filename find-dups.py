@@ -45,7 +45,7 @@ def check_name_matches(proprietary_files: set, proprietary_files_full: list, and
             lines = f.readlines()
         for i in range(len(lines) - 1):
             line = lines[i].strip()
-            if line.startswith(('cc_binary {', 'cc_library {')):
+            if line.startswith(('cc_binary {', 'cc_library {', 'hidl_interface {')):
                 next_line = lines[i + 1].strip()
                 if next_line.startswith('name:'):
                     name = next_line.split('"')[1]
