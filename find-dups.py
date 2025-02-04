@@ -1,85 +1,70 @@
 import os
-import re
 
-# Finds in proprietary-files.txt what's already defined in LineageOS.
-def find_duplicates(proprietary_files, search_path, exclude_dirs=None, exclude_files=None):
-    if exclude_dirs is None:
-        exclude_dirs = []
-    if exclude_files is None:
-        exclude_files = []
+# Define the directories to be skipped
+SKIP_DIRS = {
+    'device', 'vendor/motorola/fogo', 'out', 'vendor', 'hardware/qcom-caf/msm8953', 'hardware/qcom-caf/msm8996',
+    'hardware/qcom-caf/msm8998', 'hardware/qcom-caf/sdm660', 'hardware/qcom-caf/sdm845', 'hardware/qcom-caf/sm8150',
+    'hardware/qcom-caf/sm8250', 'hardware/qcom-caf/sm8350', 'hardware/qcom-caf/sm8450', 'hardware/qcom-caf/sm8550',
+    'hardware/qcom/sdm845', 'hardware/qcom/sm7250', 'hardware/qcom/sm8150'
+}
 
-    proprietary_files_dict = {}
-    duplicates = []
+# Define the search path
+SEARCH_PATH = '../../../'
 
-    # Regular expression to match cc_library { name }
-    cc_library_re = re.compile(r'cc_library\s*\{\s*name\s*:\s*"([^"]+)"')
-
-    # Load proprietary files into a dictionary for quick lookup
-    with open(proprietary_files, 'r') as file:
-        for line in file:
+# Function to get the list of proprietary files
+def get_proprietary_files(file_path):
+    proprietary_files = []
+    proprietary_files_full = []
+    with open(file_path, 'r') as f:
+        for line in f:
             line = line.strip()
             if line and not line.startswith('#'):
-                file_name = os.path.basename(line)
-                if file_name in proprietary_files_dict:
-                    proprietary_files_dict[file_name].append(line)
-                else:
-                    proprietary_files_dict[file_name] = [line]
+                filename = line.split('/')[-1].split('.')[0]
+                proprietary_files.append(filename)
+                proprietary_files_full.append(line)
+    return set(proprietary_files), proprietary_files_full
 
-    # Walk through the directory tree, excluding specified directories and files
-    for root, dirs, files in os.walk(search_path):
-        # Exclude specified directories
-        dirs[:] = [d for d in dirs if os.path.join(root, d) not in exclude_dirs]
-
+# Function to find Android.bp files
+def find_android_bp_files(root_path):
+    android_bp_files = []
+    for root, dirs, files in os.walk(root_path):
+        if any(skip_dir in root for skip_dir in SKIP_DIRS):
+            continue
         for file in files:
-            file_path = os.path.relpath(os.path.join(root, file), search_path)
-            file_name = os.path.basename(file_path)
+            if file == 'Android.bp':
+                android_bp_files.append(os.path.join(root, file))
+    return android_bp_files
 
-            # Exclude specified files
-            if file_name in exclude_files:
-                continue
+# Function to check for name property matches
+def check_name_matches(proprietary_files: set, proprietary_files_full: list, android_bp_files):
+    matches = {}
+    for bp_file in android_bp_files:
+        with open(bp_file, 'r') as f:
+            lines = f.readlines()
+        for line in lines:
+            line = line.strip()
+            if line.startswith('name:'):
+                name = line.split('"')[1]
+                if name in proprietary_files:
+                    if name not in matches:
+                        matches[name] = []
+                    full_entry = ', '.join(entry for entry in proprietary_files_full if name in entry)
+                    matches[name].append((full_entry, bp_file))
+    return matches
 
-            # Check for Android.bp files to parse cc_library { name } entries
-            if file_name == 'Android.bp':
-                with open(os.path.join(root, file), 'r') as bp_file:
-                    content = bp_file.read()
-                    matches = cc_library_re.findall(content)
-                    for match in matches:
-                        if match in proprietary_files_dict:
-                            for prop_path in proprietary_files_dict[match]:
-                                if file_path != prop_path:
-                                    duplicates.append((file_path, prop_path))
+def main():
+    proprietary_files_path = 'proprietary-files.txt'
+    proprietary_files, proprietary_files_full = get_proprietary_files(proprietary_files_path)
+    android_bp_files = find_android_bp_files(SEARCH_PATH)
+    matches = check_name_matches(proprietary_files, proprietary_files_full, android_bp_files)
 
-    return duplicates
+    if matches:
+        print("Matches found:")
+        for match in matches:
+            for full_entry, path in matches[match]:
+                print(f"{full_entry} already defined by {path}")
+    else:
+        print("No matches found.")
 
 if __name__ == "__main__":
-    proprietary_files = 'proprietary-files.txt'
-    search_path = '../../../'
-    exclude_dirs = [
-        os.path.join(search_path, 'device'), 
-        os.path.join(search_path, 'vendor'), 
-        os.path.join(search_path, 'out'), 
-        os.path.join(search_path, 'hardware/qcom-caf/msm8953'), 
-        os.path.join(search_path, 'hardware/qcom-caf/msm8996'), 
-        os.path.join(search_path, 'hardware/qcom-caf/msm8998'), 
-        os.path.join(search_path, 'hardware/qcom-caf/sdm660'), 
-        os.path.join(search_path, 'hardware/qcom-caf/sdm845'), 
-        os.path.join(search_path, 'hardware/qcom-caf/sm8150'), 
-        os.path.join(search_path, 'hardware/qcom-caf/sm8250'), 
-        os.path.join(search_path, 'hardware/qcom-caf/sm8350'), 
-        os.path.join(search_path, 'hardware/qcom-caf/sm8450'), 
-        os.path.join(search_path, 'hardware/qcom-caf/sm8550'),
-        os.path.join(search_path, 'hardware/qcom/sdm845'), 
-        os.path.join(search_path, 'hardware/qcom/sm7250'), 
-        os.path.join(search_path, 'hardware/qcom/sm8150')
-    ]
-    exclude_files = ['descriptor.proto', 'manifest.xml']
-
-    duplicates = find_duplicates(proprietary_files, search_path, exclude_dirs, exclude_files)
-
-    if duplicates:
-        print("Duplicates found:")
-        for file_path, prop_path in duplicates:
-            print(f"{prop_path} is already defined by {file_path}")
-    else:
-        print("No duplicates found.")
-
+    main()

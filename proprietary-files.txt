@@ -65,13 +65,18 @@ vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
 # ANT
 vendor/lib/hw/com.dsi.ant@1.0-impl.so
+vendor/lib/com.dsi.ant@1.0.so
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so
+vendor/lib64/com.dsi.ant@1.0.so
 
 # Atrace
 vendor/bin/hw/android.hardware.atrace@1.0-service
+vendor/etc/init/android.hardware.atrace@1.0-service.rc
+vendor/etc/vintf/manifest/android.hardware.atrace@1.0-service.xml
 
 # Audio
 vendor/bin/hw/android.hardware.audio.service
+vendor/etc/init/android.hardware.audio.service.rc
 vendor/lib/hw/android.hardware.audio.effect@2.0-impl.so
 vendor/lib/hw/android.hardware.audio.effect@4.0-impl.so
 vendor/lib/hw/android.hardware.audio.effect@5.0-impl.so
@@ -137,12 +142,20 @@ vendor/lib64/libdlbpreg.so
 vendor/lib64/libsensorndkbridge.so
 
 # Audio configs
+vendor/etc/audio/audio_policy_configuration.xml
+vendor/etc/a2dp_audio_policy_configuration.xml
+vendor/etc/audio_effects.xml
 vendor/etc/audio_io_policy.conf
 vendor/etc/audio_platform_info.xml
+vendor/etc/audio_policy_configuration.xml
+vendor/etc/audio_policy_volumes.xml
 vendor/etc/bluetooth_qti_audio_policy_configuration.xml
+vendor/etc/default_volume_tables.xml
 vendor/etc/mixer_paths.xml
+vendor/etc/r_submix_audio_policy_configuration.xml
 vendor/etc/sound_trigger_mixer_paths.xml
 vendor/etc/sound_trigger_platform_info.xml
+vendor/etc/usb_audio_policy_configuration.xml
 
 # Automotive
 vendor/lib/vendor.qti.hardware.automotive.vehicle@1.0.so
@@ -198,10 +211,13 @@ vendor/lib64/vendor.qti.hardware.btconfigstore@2.0.so
 
 # Boot
 vendor/bin/hw/android.hardware.boot@1.1-service
+vendor/etc/init/android.hardware.boot@1.1-service.rc
+vendor/etc/vintf/manifest/android.hardware.boot@1.1.xml
 
 # Camera
 vendor/bin/hw/android.hardware.camera.provider@2.4-service_64
 vendor/bin/hw/motorola.hardware.camera.imgtuner@2.0-service
+vendor/etc/init/android.hardware.camera.provider@2.4-service_64.rc
 vendor/etc/init/motorola.hardware.camera.imgtuner@2.0-service.rc
 vendor/lib/camera/components/com.bst.node.hdrdetect.so
 vendor/lib/camera/components/com.bst.node.mfnr.so
@@ -523,6 +539,8 @@ vendor/etc/camera/vidhance_calibration_2rd
 
 # CAS
 vendor/bin/hw/android.hardware.cas@1.2-service
+vendor/etc/init/android.hardware.cas@1.2-service.rc
+vendor/etc/vintf/manifest/android.hardware.cas@1.2-service.xml
 
 # CDSP
 vendor/bin/cdsprpcd
@@ -689,6 +707,7 @@ vendor/bin/hw/com.motorola.hardware.display.touch@1.4-service
 vendor/bin/hw/vendor.display.color@1.0-service
 vendor/bin/hw/vendor.qti.hardware.display.allocator-service
 vendor/bin/hw/vendor.qti.hardware.display.composer-service
+vendor/etc/init/android.hardware.memtrack@1.0-service.rc
 vendor/etc/init/com.motorola.hardware.display.panel@1.1-service.rc
 vendor/etc/init/com.motorola.hardware.display.touch@1.4-service.rc
 vendor/etc/init/vendor.display.color@1.0-service.rc
@@ -962,6 +981,7 @@ vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-fpc
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-goodixservice.rc
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-fpc2.rc
 vendor/lib/hw/fingerprint.goodix.default.so
+vendor/lib/com.motorola.hardware.biometric.fingerprint@1.0.so
 vendor/lib/libgf_ca.so
 vendor/lib/libgf_hal.so
 vendor/lib/libgoodixhwfingerprint.so
@@ -969,6 +989,7 @@ vendor/lib/vendor.goodix.hardware.biometrics.fingerprint@3.0.so
 vendor/lib/vendor.qti.hardware.fingerprint@1.0.so
 vendor/lib64/hw/fingerprint.goodix.default.so
 vendor/lib64/com.fingerprints.extension@1.0.so
+vendor/lib64/com.motorola.hardware.biometric.fingerprint@1.0.so
 vendor/lib64/libgf_ca.so
 vendor/lib64/libgf_hal.so
 vendor/lib64/libgoodixhwfingerprint.so
@@ -1084,9 +1105,11 @@ vendor/bin/hw/android.hardware.health@2.1-service
 vendor/bin/hw/motorola.hardware.health.storage@1.0-service
 vendor/bin/hw/motorola.hardware.health@2.0-service
 vendor/bin/hvdcp_opti
+vendor/etc/init/android.hardware.health@2.1-service.rc
 vendor/etc/init/motorola.hardware.health.storage@1.0-service.rc
 vendor/etc/init/motorola.hardware.health@2.0-service.rc
 vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
+vendor/etc/vintf/manifest/android.hardware.health@2.1.xml
 vendor/etc/charger_fstab.qti
 vendor/lib64/libmotohid.so
 vendor/lib64/motorola.hardware.health.storage@1.0.so
@@ -1103,6 +1126,7 @@ vendor/bin/ipacm
 vendor/bin/ipacm-diag
 vendor/etc/init/ipacm-diag.rc
 vendor/etc/init/ipacm.rc
+vendor/etc/IPACM_cfg.xml
 vendor/lib64/libipanat.so
 vendor/lib64/libnetfilter_conntrack.so
 vendor/lib64/libnfnetlink.so
@@ -1143,6 +1167,7 @@ vendor/lib64/hw/local_time.default.so
 # Media
 vendor/bin/hw/android.hardware.media.omx@1.0-service
 vendor/bin/hw/vendor.qti.media.c2@1.0-service
+vendor/etc/init/android.hardware.media.omx@1.0-service.rc
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
 vendor/etc/seccomp_policy/codec2.vendor.base-arm.policy
 vendor/etc/seccomp_policy/codec2.vendor.ext-arm.policy
@@ -1226,6 +1251,13 @@ vendor/etc/media_codecs_blair.xml
 vendor/etc/media_codecs_blair_lite.xml
 vendor/etc/media_codecs_c2.xml
 vendor/etc/media_codecs_dolby_audio.xml
+vendor/etc/media_codecs_google_audio.xml
+vendor/etc/media_codecs_google_c2.xml
+vendor/etc/media_codecs_google_c2_audio.xml
+vendor/etc/media_codecs_google_c2_video.xml
+vendor/etc/media_codecs_google_telephony.xml
+vendor/etc/media_codecs_google_video.xml
+vendor/etc/media_codecs_google_video_le.xml
 vendor/etc/media_codecs_holi.xml
 vendor/etc/media_codecs_performance.xml
 vendor/etc/media_codecs_performance_blair.xml
@@ -1654,7 +1686,9 @@ vendor/bin/hw/android.hardware.sensors@2.0-service.multihal
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
 vendor/bin/sensors.qti
 vendor/bin/sscrpcd
+vendor/etc/init/android.hardware.sensors@2.0-service-multihal.rc
 vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc
+vendor/etc/vintf/manifest/android.hardware.sensors@2.0-multihal.xml
 vendor/lib/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
 vendor/lib/libsensorcal.so
 vendor/lib/libsns_device_mode_stub.so
@@ -1722,6 +1756,7 @@ vendor/etc/sensors/proto/mot_proxcal.proto
 vendor/etc/sensors/proto/mot_stowed.proto
 vendor/etc/sensors/proto/mot_tap.proto
 vendor/etc/sensors/proto/mot_vsync.proto
+vendor/etc/sensors/proto/nanopb.proto
 vendor/etc/sensors/proto/sns_accel.proto
 vendor/etc/sensors/proto/sns_accel_cal.proto
 vendor/etc/sensors/proto/sns_activity_recognition.proto
@@ -1886,6 +1921,7 @@ vendor/lib64/motorola.hardware.vibrator@1.0.so
 
 # Wi-Fi
 vendor/bin/hw/android.hardware.wifi@1.0-service
+vendor/bin/hw/hostapd
 vendor/bin/hw/wpa_supplicant
 vendor/bin/cnss-daemon
 vendor/bin/hostapd_cli
@@ -1920,7 +1956,10 @@ vendor/etc/wifi/WCNSS_qcom_cfg.ini
 vendor/etc/wifi/aoa_cldb_falcon.bin
 vendor/etc/wifi/aoa_cldb_swl14.bin
 vendor/etc/wifi/icm.conf
+vendor/etc/wifi/p2p_supplicant_overlay.conf
 vendor/etc/wifi/wfdr2_regex.conf
+vendor/etc/wifi/wpa_supplicant.conf
+vendor/etc/wifi/wpa_supplicant_overlay.conf
 
 # Wi-Fi Display
 vendor/bin/wfdhdcphalservice
@@ -2011,6 +2050,7 @@ vendor/bin/diag_mdlog-getlogs
 vendor/bin/diag_mdlog-wrap
 vendor/bin/diag_socket_log
 vendor/bin/diag_uart_log
+vendor/bin/dumpsys
 vendor/bin/e_loop
 vendor/bin/embmsslServer
 vendor/bin/expat
@@ -2123,6 +2163,8 @@ vendor/etc/diag_mdlog/Wlan_V2.cfg
 vendor/etc/diag_mdlog/default.cfg
 vendor/etc/diag_mdlog/default.opts
 vendor/etc/diag_mdlog/diag-adsp-bm.cfg
+vendor/etc/init/boringssl_self_test.rc
+vendor/etc/init/hostapd.android.rc
 vendor/etc/init/imsdaemon.rc
 vendor/etc/init/init.embmssl_server.rc
 vendor/etc/init/init.gf_ident.rc
@@ -2153,6 +2195,7 @@ vendor/etc/init/vendor.qti.psiclient@1.0-service.rc
 vendor/etc/init/vendor.sensors.qti.rc
 vendor/etc/init/vendor.sensors.sscrpcd.rc
 vendor/etc/init/vendor_flash_recovery.rc
+vendor/etc/init/vndservicemanager.rc
 vendor/etc/lm/prekill/prekill_2GB.data
 vendor/etc/lm/prekill/prekill_4GB.data
 vendor/etc/lm/prekill/prekill_6GB.data
@@ -2243,13 +2286,17 @@ vendor/etc/fstab_zramwriteback.qcom
 vendor/etc/gnss_antenna_info.conf
 vendor/etc/gpfspath_oem_config.xml
 vendor/etc/init.qti.fm.sh
+vendor/etc/mkshrc
 vendor/etc/msm_irqbalance.conf
 vendor/etc/nfc_calibration.txt
+vendor/etc/public.libraries.txt
 vendor/etc/qguard.json
 vendor/etc/sec_config
 vendor/etc/simlock_template.dat
 vendor/etc/smomo_setting.xml
 vendor/etc/snapdragon_color_libs_config.xml
+vendor/etc/task_profiles.json
+vendor/etc/ueventd.rc
 vendor/etc/vhw.xml
 vendor/etc/video_system_specs.json
 vendor/etc/wfd.hdcp.bin
@@ -2740,3 +2787,4 @@ vendor/usr/keylayout/ReadyForAirRemote_Consumer_Control.kl
 vendor/usr/keylayout/ReadyForAirRemote_Keyboard.kl
 vendor/usr/keylayout/uinput-fpc.kl
 vendor/usr/keylayout/uinput_nav.kl
+vendor/ueventd.rc
