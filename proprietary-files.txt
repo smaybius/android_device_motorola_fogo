@@ -1685,7 +1685,6 @@ vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.soter@1.0.so
 
 # Soundtrigger
-vendor/lib/hw/android.hardware.soundtrigger@2.1-impl.so
 vendor/lib/hw/sound_trigger.primary.holi.so
 vendor/lib/vendor.qti.voiceprint@1.0.so
 vendor/lib64/hw/sound_trigger.primary.holi.so
@@ -1748,17 +1747,14 @@ vendor/lib64/motorola.hardware.vibrator@1.0.so
 # Wi-Fi
 vendor/bin/hw/android.hardware.wifi@1.0-service
 vendor/bin/cnss-daemon
-vendor/bin/wpa_cli
 vendor/etc/init/android.hardware.wifi@1.0-service.rc
 vendor/etc/init/vendor.qti.hardware.wifi.wifilearner@1.0-service.rc
 vendor/etc/vintf/manifest/android.hardware.wifi@1.0-service.xml
-vendor/lib/libwifi-hal-ctrl.so
 vendor/lib/vendor.qti.hardware.wigig.netperftuner@1.0.so
 vendor/lib64/motorola.hardware.wifi.supplicant@1.0.so
 vendor/lib64/motorola.hardware.wifi.supplicant@1.0_vendor.so
 vendor/lib64/motorola.hardware.wifi.supplicant@1.1.so
 vendor/lib64/vendor.qti.hardware.wifi.keystore@1.0.so
-vendor/lib64/libwifi-hal-ctrl.so
 vendor/lib64/vendor.qti.hardware.wifi.wifilearner@1.0.so
 vendor/lib64/vendor.qti.hardware.wigig.netperftuner@1.0.so
 
@@ -1770,7 +1766,6 @@ vendor/etc/wifi/aoa_cldb_swl14.bin
 vendor/etc/wifi/icm.conf
 vendor/etc/wifi/p2p_supplicant_overlay.conf
 vendor/etc/wifi/wfdr2_regex.conf
-vendor/etc/wifi/wpa_supplicant.conf
 vendor/etc/wifi/wpa_supplicant_overlay.conf
 
 # Wi-Fi Display
