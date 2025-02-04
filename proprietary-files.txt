@@ -70,13 +70,8 @@ vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 vendor/lib64/com.dsi.ant@1.0.so
 
 # Atrace
-vendor/bin/hw/android.hardware.atrace@1.0-service
-vendor/etc/init/android.hardware.atrace@1.0-service.rc
-vendor/etc/vintf/manifest/android.hardware.atrace@1.0-service.xml
 
 # Audio
-vendor/bin/hw/android.hardware.audio.service
-vendor/etc/init/android.hardware.audio.service.rc
 vendor/lib/hw/android.hardware.audio.effect@2.0-impl.so
 vendor/lib/hw/android.hardware.audio.effect@4.0-impl.so
 vendor/lib/hw/android.hardware.audio.effect@5.0-impl.so
@@ -210,14 +205,10 @@ vendor/lib64/vendor.qti.hardware.btconfigstore@1.0.so
 vendor/lib64/vendor.qti.hardware.btconfigstore@2.0.so
 
 # Boot
-vendor/bin/hw/android.hardware.boot@1.1-service
-vendor/etc/init/android.hardware.boot@1.1-service.rc
 vendor/etc/vintf/manifest/android.hardware.boot@1.1.xml
 
 # Camera
-vendor/bin/hw/android.hardware.camera.provider@2.4-service_64
 vendor/bin/hw/motorola.hardware.camera.imgtuner@2.0-service
-vendor/etc/init/android.hardware.camera.provider@2.4-service_64.rc
 vendor/etc/init/motorola.hardware.camera.imgtuner@2.0-service.rc
 vendor/lib/camera/components/com.bst.node.hdrdetect.so
 vendor/lib/camera/components/com.bst.node.mfnr.so
@@ -538,9 +529,6 @@ vendor/etc/camera/vidhance_calibration
 vendor/etc/camera/vidhance_calibration_2rd
 
 # CAS
-vendor/bin/hw/android.hardware.cas@1.2-service
-vendor/etc/init/android.hardware.cas@1.2-service.rc
-vendor/etc/vintf/manifest/android.hardware.cas@1.2-service.xml
 
 # CDSP
 vendor/bin/cdsprpcd
@@ -1101,11 +1089,9 @@ vendor/etc/sap.conf
 vendor/etc/xtwifi.conf
 
 # Health
-vendor/bin/hw/android.hardware.health@2.1-service
 vendor/bin/hw/motorola.hardware.health.storage@1.0-service
 vendor/bin/hw/motorola.hardware.health@2.0-service
 vendor/bin/hvdcp_opti
-vendor/etc/init/android.hardware.health@2.1-service.rc
 vendor/etc/init/motorola.hardware.health.storage@1.0-service.rc
 vendor/etc/init/motorola.hardware.health@2.0-service.rc
 vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
@@ -1165,9 +1151,7 @@ vendor/lib/hw/local_time.default.so
 vendor/lib64/hw/local_time.default.so
 
 # Media
-vendor/bin/hw/android.hardware.media.omx@1.0-service
 vendor/bin/hw/vendor.qti.media.c2@1.0-service
-vendor/etc/init/android.hardware.media.omx@1.0-service.rc
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
 vendor/etc/seccomp_policy/codec2.vendor.base-arm.policy
 vendor/etc/seccomp_policy/codec2.vendor.ext-arm.policy
@@ -1190,7 +1174,6 @@ vendor/lib/libOmxVideoDSMode.so
 vendor/lib/libOmxWmaDec.so
 vendor/lib/libmmosal.so
 vendor/lib/libplatformconfig.so
-vendor/lib/libstagefright_bufferpool@2.0.1.so
 vendor/lib/libstagefright_soft_qtiflacdec.so
 vendor/lib/libstagefright_softomx_plugin.so
 vendor/lib/libstagefrighthw.so
@@ -1218,7 +1201,6 @@ vendor/lib64/libOmxQcelp13Dec.so
 vendor/lib64/libOmxWmaDec.so
 vendor/lib64/libmmosal.so
 vendor/lib64/libplatformconfig.so
-vendor/lib64/libstagefright_bufferpool@2.0.1.so
 vendor/lib64/libstagefright_soft_qtiflacdec.so
 vendor/lib64/libstagefrighthw.so
 vendor/lib64/libwfddisplayconfig_proprietary.so
@@ -1237,7 +1219,6 @@ vendor/etc/vintf/manifest/vendor.dolby.hardware.dms.xml
 vendor/etc/vintf/manifest/vendor.dolby.media.c2@1.0-service.xml
 vendor/lib/libdapparamstorage.so
 vendor/lib/vendor.dolby.hardware.dms@2.0.so
-vendor/lib64/libcodec2_hidl@1.1.so
 vendor/lib64/libcodec2_store_dolby.so
 vendor/lib64/libdapparamstorage.so
 vendor/lib64/libdeccfg.so
@@ -1682,7 +1663,6 @@ vendor/lib/hw/android.hardware.renderscript@1.0-impl.so
 vendor/lib64/hw/android.hardware.renderscript@1.0-impl.so
 
 # Sensors
-vendor/bin/hw/android.hardware.sensors@2.0-service.multihal
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
 vendor/bin/sensors.qti
 vendor/bin/sscrpcd
@@ -1921,27 +1901,19 @@ vendor/lib64/motorola.hardware.vibrator@1.0.so
 
 # Wi-Fi
 vendor/bin/hw/android.hardware.wifi@1.0-service
-vendor/bin/hw/hostapd
-vendor/bin/hw/wpa_supplicant
 vendor/bin/cnss-daemon
-vendor/bin/hostapd_cli
 vendor/bin/wpa_cli
 vendor/etc/init/android.hardware.wifi@1.0-service.rc
 vendor/etc/init/vendor.qti.hardware.wifi.wifilearner@1.0-service.rc
 vendor/etc/vintf/manifest/android.hardware.wifi@1.0-service.xml
 vendor/lib/libwifi-hal-ctrl.so
-vendor/lib/libwifi-hal-qcom.so
 vendor/lib/vendor.qti.hardware.wigig.netperftuner@1.0.so
 vendor/lib64/libkeystore-engine-wifi-hidl.so
-vendor/lib64/libkeystore-wifi-hidl.so
 vendor/lib64/libwifi-hal-ctrl.so
-vendor/lib64/libwifi-hal-qcom.so
 vendor/lib64/libwifi-hal.so
 vendor/lib64/motorola.hardware.wifi.supplicant@1.0.so
 vendor/lib64/motorola.hardware.wifi.supplicant@1.0_vendor.so
 vendor/lib64/motorola.hardware.wifi.supplicant@1.1.so
-vendor/lib64/vendor.qti.hardware.wifi.hostapd@1.0.so
-vendor/lib64/vendor.qti.hardware.wifi.hostapd@1.1.so
 vendor/lib64/vendor.qti.hardware.wifi.keystore@1.0.so
 vendor/lib64/vendor.qti.hardware.wifi.supplicant@1.0.so
 vendor/lib64/vendor.qti.hardware.wifi.supplicant@2.0.so
@@ -2025,7 +1997,6 @@ vendor/bin/StoreKeybox
 vendor/bin/TBaseDeviceBinding
 vendor/bin/aplogcat
 vendor/bin/aplogd
-vendor/bin/applypatch
 vendor/bin/athdiag
 vendor/bin/audioadsprpcd
 vendor/bin/audioflacapp
@@ -2038,7 +2009,6 @@ vendor/bin/capsense_reset
 vendor/bin/ccid_daemon_nr
 vendor/bin/charge_only_mode
 vendor/bin/cnss_diag
-vendor/bin/cplay
 vendor/bin/ctrlapp_dut
 vendor/bin/debug-diag
 vendor/bin/diag-router
@@ -2050,7 +2020,6 @@ vendor/bin/diag_mdlog-getlogs
 vendor/bin/diag_mdlog-wrap
 vendor/bin/diag_socket_log
 vendor/bin/diag_uart_log
-vendor/bin/dumpsys
 vendor/bin/e_loop
 vendor/bin/embmsslServer
 vendor/bin/expat
@@ -2086,7 +2055,6 @@ vendor/bin/motobox
 vendor/bin/msm_irqbalance
 vendor/bin/mutualex
 vendor/bin/myftm
-vendor/bin/nqnfcinfo
 vendor/bin/pktlogconf
 vendor/bin/pm-proxy
 vendor/bin/pm-service
@@ -2122,8 +2090,6 @@ vendor/bin/tcmd
 vendor/bin/tcmd_diag_dci
 vendor/bin/tcmdhelp
 vendor/bin/test_diag
-vendor/bin/tinymix
-vendor/bin/tinyplay
 vendor/bin/tzlogd
 vendor/bin/ubwcconvert
 vendor/bin/ufsgetsn
@@ -2164,7 +2130,6 @@ vendor/etc/diag_mdlog/default.cfg
 vendor/etc/diag_mdlog/default.opts
 vendor/etc/diag_mdlog/diag-adsp-bm.cfg
 vendor/etc/init/boringssl_self_test.rc
-vendor/etc/init/hostapd.android.rc
 vendor/etc/init/imsdaemon.rc
 vendor/etc/init/init.embmssl_server.rc
 vendor/etc/init/init.gf_ident.rc
@@ -2493,7 +2458,6 @@ vendor/lib/libpn557_fw.so
 vendor/lib/libportrait_repair_ppl3_ocl.so
 vendor/lib/libpowercallback.so
 vendor/lib/libpowercore.so
-vendor/lib/libpsi.so
 vendor/lib/libqc2colorconvertfilter.so
 vendor/lib/libqc2filter.so
 vendor/lib/libqcci_legacy.so
@@ -2566,7 +2530,6 @@ vendor/lib/libtzdrmgenprov.so
 vendor/lib/libvideooptfeature.so
 vendor/lib/libvideoutils.so
 vendor/lib/libvndfwk_detect_jni.qti.so
-vendor/lib/libvpx.so
 vendor/lib/libwms.so
 vendor/lib/libwqe.so
 vendor/lib/motorola.hardware.tcmd@1.0.so
@@ -2626,7 +2589,6 @@ vendor/lib64/libcirrusspkrprot.so
 vendor/lib64/libcneoplookup.so
 vendor/lib64/libcneqmiutils.so
 vendor/lib64/libcodec2_soft_ac4dec.so
-vendor/lib64/libcodec2_soft_common.so
 vendor/lib64/libcodec2_soft_ddpdec.so
 vendor/lib64/libcomprcapture.so
 vendor/lib64/libcvp_common.so
@@ -2697,7 +2659,6 @@ vendor/lib64/libportrait_repair_ppl3_ocl.so
 vendor/lib64/libpowercallback.so
 vendor/lib64/libpowercore.so
 vendor/lib64/libprekill.so
-vendor/lib64/libpsi.so
 vendor/lib64/libqc2colorconvertfilter.so
 vendor/lib64/libqc2filter.so
 vendor/lib64/libqcci_legacy.so
@@ -2742,7 +2703,6 @@ vendor/lib64/librmsclib1.so
 vendor/lib64/librpmb.so
 vendor/lib64/libsdm-colormgr-algo.so
 vendor/lib64/libsdsprpc.so
-vendor/lib64/libsfplugin_ccodec_utils.so
 vendor/lib64/libskewknob.so
 vendor/lib64/libslimclient.so
 vendor/lib64/libsmemlog.so

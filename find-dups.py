@@ -19,7 +19,9 @@ def get_proprietary_files(file_path):
         for line in f:
             line = line.strip()
             if line and not line.startswith('#'):
-                filename = line.split('/')[-1].split('.')[0]
+                filename = line.split('/')[-1]
+                if filename.endswith('.so'):
+                    filename = filename[:-3]  # Remove the ".so" extension
                 proprietary_files.append(filename)
                 proprietary_files_full.append(line)
     return set(proprietary_files), proprietary_files_full
@@ -41,15 +43,17 @@ def check_name_matches(proprietary_files: set, proprietary_files_full: list, and
     for bp_file in android_bp_files:
         with open(bp_file, 'r') as f:
             lines = f.readlines()
-        for line in lines:
-            line = line.strip()
-            if line.startswith('name:'):
-                name = line.split('"')[1]
-                if name in proprietary_files:
-                    if name not in matches:
-                        matches[name] = []
-                    full_entry = ', '.join(entry for entry in proprietary_files_full if name in entry)
-                    matches[name].append((full_entry, bp_file))
+        for i in range(len(lines) - 1):
+            line = lines[i].strip()
+            if line.startswith(('cc_binary {', 'cc_library {')):
+                next_line = lines[i + 1].strip()
+                if next_line.startswith('name:'):
+                    name = next_line.split('"')[1]
+                    if name in proprietary_files:
+                        if name not in matches:
+                            matches[name] = []
+                        full_entries = [entry for entry in proprietary_files_full if name in entry]
+                        matches[name].append((full_entries, bp_file))
     return matches
 
 def main():
@@ -61,8 +65,9 @@ def main():
     if matches:
         print("Matches found:")
         for match in matches:
-            for full_entry, path in matches[match]:
-                print(f"{full_entry} already defined by {path}")
+            for full_entries, path in matches[match]:
+                full_entry_str = ', '.join(full_entries)
+                print(f"{full_entry_str} already defined by {path}")
     else:
         print("No matches found.")
 
