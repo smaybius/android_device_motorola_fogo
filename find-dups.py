@@ -1,4 +1,5 @@
 import os
+import re
 
 # Finds in proprietary-files.txt what's already defined in LineageOS.
 def find_duplicates(proprietary_files, search_path, exclude_dirs=None, exclude_files=None):
@@ -9,6 +10,9 @@ def find_duplicates(proprietary_files, search_path, exclude_dirs=None, exclude_f
 
     proprietary_files_dict = {}
     duplicates = []
+
+    # Regular expression to match cc_library { name }
+    cc_library_re = re.compile(r'cc_library\s*\{\s*name\s*:\s*"([^"]+)"')
 
     # Load proprietary files into a dictionary for quick lookup
     with open(proprietary_files, 'r') as file:
@@ -25,18 +29,25 @@ def find_duplicates(proprietary_files, search_path, exclude_dirs=None, exclude_f
     for root, dirs, files in os.walk(search_path):
         # Exclude specified directories
         dirs[:] = [d for d in dirs if os.path.join(root, d) not in exclude_dirs]
-        
+
         for file in files:
             file_path = os.path.relpath(os.path.join(root, file), search_path)
             file_name = os.path.basename(file_path)
+
             # Exclude specified files
             if file_name in exclude_files:
                 continue
-            # Check if the file name is in the proprietary dictionary as a whole word
-            if file_name in proprietary_files_dict:
-                for prop_path in proprietary_files_dict[file_name]:
-                    if file_path != prop_path:
-                        duplicates.append((file_path, prop_path))
+
+            # Check for Android.bp files to parse cc_library { name } entries
+            if file_name == 'Android.bp':
+                with open(os.path.join(root, file), 'r') as bp_file:
+                    content = bp_file.read()
+                    matches = cc_library_re.findall(content)
+                    for match in matches:
+                        if match in proprietary_files_dict:
+                            for prop_path in proprietary_files_dict[match]:
+                                if file_path != prop_path:
+                                    duplicates.append((file_path, prop_path))
 
     return duplicates
 
