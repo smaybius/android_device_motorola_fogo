@@ -5,6 +5,7 @@
 #
 
 DEVICE_PATH := device/motorola/fogo
+BUILD_BROKEN_DUP_RULES := true
 
 # A/B
 AB_OTA_UPDATER := true
