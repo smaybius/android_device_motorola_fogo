@@ -1830,8 +1830,6 @@ vendor/bin/audioflacapp
 vendor/bin/batch
 vendor/bin/batt_health
 vendor/bin/bootloaderlog
-vendor/bin/boringssl_self_test32
-vendor/bin/boringssl_self_test64
 vendor/bin/capsense_reset
 vendor/bin/ccid_daemon_nr
 vendor/bin/charge_only_mode
