@@ -36,6 +36,9 @@ PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
 
+PRODUCT_PACKAGES += \
+    libqsap_sdk
+
 # API levels
 PRODUCT_SHIPPING_API_LEVEL := 34
 
