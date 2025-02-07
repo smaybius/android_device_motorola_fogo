@@ -1896,8 +1896,6 @@ vendor/bin/qmipriod
 vendor/bin/qseecom_sample_client
 vendor/bin/qtigetprop
 vendor/bin/qtisetprop
-vendor/bin/qttestclient
-vendor/bin/qttestservice
 vendor/bin/rsudaemon
 vendor/bin/sendevent2
 vendor/bin/setconfig
@@ -1975,7 +1973,6 @@ vendor/etc/init/qdcmss.rc
 vendor/etc/init/qguard.rc
 vendor/etc/init/qmipriod.debug.rc
 vendor/etc/init/qmipriod.rc
-vendor/etc/init/qttestservice.rc
 vendor/etc/init/shsusrd.rc
 vendor/etc/init/tzlogd.rc
 vendor/etc/init/vendor.mmi.carrier.rc
@@ -2312,8 +2309,6 @@ vendor/lib/libqti-utils.so
 vendor/lib/libqtigef.so
 vendor/lib/libqtjsonhelper.so
 vendor/lib/libqtnodes.so
-vendor/lib/libqttestclient.so
-vendor/lib/libqttestservice.so
 vendor/lib/librcmask.so
 vendor/lib/librecovery_updater.so
 vendor/lib/librecovery_updater_msm.so
@@ -2512,8 +2507,6 @@ vendor/lib64/libqti-utils.so
 vendor/lib64/libqtigef.so
 vendor/lib64/libqtjsonhelper.so
 vendor/lib64/libqtnodes.so
-vendor/lib64/libqttestclient.so
-vendor/lib64/libqttestservice.so
 vendor/lib64/librcmask.so
 vendor/lib64/librecovery_updater.so
 vendor/lib64/librecovery_updater_msm.so
