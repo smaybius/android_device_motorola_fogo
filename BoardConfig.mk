@@ -47,7 +47,11 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_SEPARATED_DTBO := true
-TARGET_KERNEL_CONFIG := gki_defconfig
+TARGET_KERNEL_CONFIG := \
+    vendor/holi-qgki_defconfig \
+    vendor/ext_config/moto-holi.config \
+    vendor/ext_config/moto-holi-fogo.config
+
 TARGET_KERNEL_SOURCE := kernel/motorola/fogo
 
 # Partitions
