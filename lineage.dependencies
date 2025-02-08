@@ -2,5 +2,9 @@
   {
     "repository": "android_hardware_motorola",
     "target_path": "hardware/motorola"
+  },
+  {
+    "repository": "android_kernel_motorola_fogo",
+    "target_path": "kernel/motorola/fogo"
   }
 ]
