@@ -204,12 +204,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.servicetracker@1.1 \
     vendor.qti.hardware.servicetracker@1.2
 
-# soundfx
-PRODUCT_PACKAGES += \
-    libqcomvisualizer \
-    libqcomvoiceprocessing \
-    libvolumelistener
-
 # Touch
 PRODUCT_PACKAGES += \
     com.motorola.hardware.biometric.fingerprint@1.0 \
@@ -217,8 +211,6 @@ PRODUCT_PACKAGES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
-    hostapd \
-    libwifi-hal-qcom \
     vendor.qti.hardware.wifi.supplicant@1.0 \
     vendor.qti.hardware.wifi.supplicant@2.0 \
     vendor.qti.hardware.wifi.supplicant@2.1 \
