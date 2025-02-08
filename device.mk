@@ -42,6 +42,65 @@ PRODUCT_PACKAGES += \
 # API levels
 PRODUCT_SHIPPING_API_LEVEL := 34
 
+# ANT
+PRODUCT_PACKAGES += \
+    com.dsi.ant@1.0
+
+# Bluetooth
+PRODUCT_PACKAGES += \
+    libqti_vndfwk_detect \
+    vendor.qti.hardware.bluetooth_audio@2.0 \
+    vendor.qti.hardware.bluetooth_audio@2.1 \
+    vendor.qti.hardware.btconfigstore@1.0 \
+    vendor.qti.hardware.btconfigstore@2.0
+
+# Camera
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.camera.postproc@1.0
+
+# Configstore
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.capabilityconfigstore@1.0
+
+# Display
+PRODUCT_PACKAGES += \
+    vendor.display.config@1.0 \
+    vendor.display.config@1.1 \
+    vendor.display.config@1.10 \
+    vendor.display.config@1.11 \
+    vendor.display.config@1.12 \
+    vendor.display.config@1.13 \
+    vendor.display.config@1.14 \
+    vendor.display.config@1.15 \
+    vendor.display.config@1.2 \
+    vendor.display.config@1.3 \
+    vendor.display.config@1.4 \
+    vendor.display.config@1.5 \
+    vendor.display.config@1.6 \
+    vendor.display.config@1.7 \
+    vendor.display.config@1.8 \
+    vendor.display.config@1.9 \
+    vendor.display.config@2.0 \
+    vendor.qti.hardware.display.allocator@1.0 \
+    vendor.qti.hardware.display.allocator@3.0 \
+    vendor.qti.hardware.display.allocator@4.0 \
+    vendor.qti.hardware.display.composer@1.0 \
+    vendor.qti.hardware.display.composer@2.0 \
+    vendor.qti.hardware.display.composer@3.0 \
+    vendor.qti.hardware.display.mapper@1.0 \
+    vendor.qti.hardware.display.mapper@1.1 \
+    vendor.qti.hardware.display.mapper@2.0 \
+    vendor.qti.hardware.display.mapper@3.0 \
+    vendor.qti.hardware.display.mapper@4.0 \
+    vendor.qti.hardware.display.mapperextensions@1.0 \
+    vendor.qti.hardware.display.mapperextensions@1.1 \
+    vendor.qti.hardware.display.mapperextensions@1.2 \
+    vendor.qti.hardware.display.mapperextensions@1.3
+
+# Face
+PRODUCT_PACKAGES += \
+    libcamera2ndk_vendor
+
 # fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
@@ -60,6 +119,13 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# Perf
+PRODUCT_PACKAGES += \
+    libqti-perfd-client \
+    vendor.qti.hardware.perf@2.0 \
+    vendor.qti.hardware.perf@2.1 \
+    vendor.qti.hardware.perf@2.2
 
 # Product characteristics
 PRODUCT_CHARACTERISTICS := default
@@ -132,9 +198,31 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     sensors.fogo
 
+# Service tracker
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.servicetracker@1.0 \
+    vendor.qti.hardware.servicetracker@1.1 \
+    vendor.qti.hardware.servicetracker@1.2
+
+# soundfx
+PRODUCT_PACKAGES += \
+    libqcomvisualizer \
+    libqcomvoiceprocessing \
+    libvolumelistener
+
 # Touch
 PRODUCT_PACKAGES += \
+    com.motorola.hardware.biometric.fingerprint@1.0 \
     vendor.lineage.touch@1.0-service.fogo
+
+# Wifi
+PRODUCT_PACKAGES += \
+    hostapd \
+    libwifi-hal-qcom \
+    vendor.qti.hardware.wifi.supplicant@1.0 \
+    vendor.qti.hardware.wifi.supplicant@2.0 \
+    vendor.qti.hardware.wifi.supplicant@2.1 \
+    vendor.qti.hardware.wifi.supplicant@2.2
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_VENDOR_RAMDISK_OUT)/first_stage_ramdisk/fstab.qcom
