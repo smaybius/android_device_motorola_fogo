@@ -1819,8 +1819,6 @@ vendor/lib64/vendor.qti.hardware.sigma_miracast@1.0.so
 vendor/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so
 
 # Miscellaneous
--odm/etc/vintf/manifest_dn.xml
--odm/etc/vintf/manifest_n.xml
 vendor/app/CACertService/CACertService.apk
 vendor/app/mcRegistry/07010000000000000000000000000000.tlbin
 vendor/app/mcRegistry/08881000000000000000000000000000.tlbin

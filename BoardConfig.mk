@@ -51,6 +51,16 @@ TARGET_BOOTLOADER_BOARD_NAME := holi
 # Display
 TARGET_SCREEN_DENSITY := 280
 
+# HIDL
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/device_framework_matrix.xml hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml vendor/lineage/config/device_framework_matrix.xml
+# via product/etc/vintf in the dump
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
+DEVICE_MATRIX_FILE := $(DEVICE_PATH)/device_vendor_matrix.xml hardware/qcom-caf/common/compatibility_matrix.xml
+    
+# via vendor/etc/vintf in the dump
+ODM_MANIFEST_FILES := $(DEVICE_PATH)/manifest_dn.xml $(DEVICE_PATH)/manifest_n.xml
+# via odm/etc/vintf in the dump
+
 # Kernel
 BOARD_BOOTIMG_HEADER_VERSION := 3
 BOARD_KERNEL_BASE := 0x00000000
@@ -121,9 +131,6 @@ BOARD_AVB_VENDOR_BOOT_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
 BOARD_AVB_VENDOR_BOOT_ALGORITHM := SHA256_RSA4096
 BOARD_AVB_VENDOR_BOOT_ROLLBACK_INDEX := 1
 BOARD_AVB_VENDOR_BOOT_ROLLBACK_INDEX_LOCATION := 1
-
-# VINTF
-DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # WiFi
 BOARD_WLAN_DEVICE := qcwcn
