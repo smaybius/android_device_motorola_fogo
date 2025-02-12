@@ -16,7 +16,7 @@ AB_OTA_PARTITIONS += \
     vendor
 
 # ANT+
-BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
+BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
 # Audio
 AUDIO_FEATURE_ENABLED_DLKM := true
@@ -48,8 +48,38 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a75
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := holi
 
+# Camera
+BOARD_CAMERA_SUPPORT_AVS := true
+USE_DEVICE_SPECIFIC_CAMERA := true
+TARGET_USES_QTI_CAMERA_DEVICE := true
+TARGET_USES_MEDIA_EXTENSIONS := true
+
+# Charger
+BOARD_CHARGER_ENABLE_SUSPEND := true
+BOARD_CHARGER_SHOW_PERCENTAGE := true
+TARGET_POWER_QTI_HAL_VERSION := 2.0
+
 # Display
 TARGET_SCREEN_DENSITY := 280
+TARGET_USES_HWC2 := true
+TARGET_USES_GRALLOC1 := true
+TARGET_USES_GRALLOC_EXTENSIONS := true
+TARGET_USES_QTI_MAPPER_2_0 := true
+TARGET_USES_QTI_MAPPER_EXTENSIONS_1_1 := true
+TARGET_USES_COLOR_METADATA := true
+
+# DTB
+BOARD_DTBO_CONFIG_DIR := $(DEVICE_PATH)/dtbo
+
+# DRM
+TARGET_ENABLE_MEDIADRM_WIDEVINE_L1 := true
+
+# Filesystem
+TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_COPY_OUT_VENDOR := vendor
+
+# GPS
+BOARD_VENDOR_QCOM_GPS_ENABLED := true
 
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/device_framework_matrix.xml hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml vendor/lineage/config/device_framework_matrix.xml
@@ -81,8 +111,17 @@ TARGET_KERNEL_SOURCE := kernel/motorola/fogo
 # With GCC enabled, the error occurs: error: version 'kernel' in target triple 'arm-unknown-linux-androidkernel' is invalid. GCC disabled in other smx3xx device repos
 TARGET_KERNEL_NO_GCC := true
 
+# Keymaster
+TARGET_PROVIDES_KEYMASTER := true
+
+# Media
+TARGET_USES_MEDIA_EXTENSIONS := true
+
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
+
+# Netd
+TARGET_NETD_HIDE_LEGACY_PTS := true
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
@@ -101,6 +140,7 @@ BOARD_MOTOROLA_DYNAMIC_PARTITIONS_SIZE := 9122611200 # TODO: Fix hardcoded value
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := holi
+TARGET_QCOM_CUSTOM_DELIVERY_OPTIMIZATION := false
 
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
@@ -119,10 +159,19 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
 # RIL
+TARGET_PROVIDES_QTI_RADIO := true
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # Security patch level
 VENDOR_SECURITY_PATCH := 2024-12-01
+
+# Sepolicy
+BOARD_VENDOR_SEPOLICY_VERS := 31.0
+
+# Treble
+BOARD_VNDK_VERSION := current
+PRODUCT_FULL_TREBLE_OVERRIDE := true
+BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 
 # Verified Boot
 BOARD_AVB_ENABLE := true

@@ -4,6 +4,11 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+PRODUCT_NAME := lineage_fogo
+PRODUCT_DEVICE := fogo
+PRODUCT_BRAND := motorola
+PRODUCT_MODEL := Moto G 5G (2024)
+
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
@@ -258,7 +263,9 @@ PRODUCT_PACKAGES += \
     libqservice \
     libsdmcore \
     libsndmonitor \
-    libspkrprot
+    libspkrprot \
+    libtinyxml \
+    libvulkan
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_VENDOR_RAMDISK_OUT)/first_stage_ramdisk/fstab.qcom
