@@ -49,6 +49,26 @@ PRODUCT_SHIPPING_API_LEVEL := 34
 PRODUCT_PACKAGES += \
     com.dsi.ant@1.0
 
+# Audio
+PRODUCT_PACKAGES += \
+    android.hardware.audio@6.0-impl \
+    android.hardware.audio.effect@6.0-impl \
+    android.hardware.audio.service \
+    android.hardware.bluetooth.audio-impl \
+    android.hardware.soundtrigger@2.3-impl \
+    audio.bluetooth.default \
+    audio.r_submix.default \
+    audio.usb.default \
+    audioadsprpcd \
+    libqcompostprocbundle \
+    libqcomvisualizer \
+    libqcomvoiceprocessing \
+    libvolumelistener
+
+AUDIO_HAL_DIR := hardware/qcom-caf/sm8350/audio
+
+# Battery
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect \
@@ -84,6 +104,7 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.8 \
     vendor.display.config@1.9 \
     vendor.display.config@2.0 \
+    vendor.qti.hardware.display.allocator-service \
     vendor.qti.hardware.display.allocator@1.0 \
     vendor.qti.hardware.display.allocator@3.0 \
     vendor.qti.hardware.display.allocator@4.0 \
@@ -214,10 +235,30 @@ PRODUCT_PACKAGES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
+    hostapd \
     vendor.qti.hardware.wifi.supplicant@1.0 \
     vendor.qti.hardware.wifi.supplicant@2.0 \
     vendor.qti.hardware.wifi.supplicant@2.1 \
     vendor.qti.hardware.wifi.supplicant@2.2
+
+# Unorganized
+PRODUCT_PACKAGES += \
+    liba2dpoffload \
+    libbatterylistener \
+    libcirrusspkrprot \
+    libcomprcapture \
+    libexthwplugin \
+    libgpu_tonemapper \
+    libgralloccore \
+    libgrallocutils \
+    libhdmiedid \
+    libhdmipassthru \
+    libhfp \
+    libqdutils \
+    libqservice \
+    libsdmcore \
+    libsndmonitor \
+    libspkrprot
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_VENDOR_RAMDISK_OUT)/first_stage_ramdisk/fstab.qcom

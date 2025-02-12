@@ -39,7 +39,7 @@ def main():
     skip_dirs = [
         'device/', 'vendor/motorola/fogo', 'out/', '.repo/', 'hardware/qcom-caf/msm8953', 'hardware/qcom-caf/msm8996',
         'hardware/qcom-caf/msm8998', 'hardware/qcom-caf/sdm660', 'hardware/qcom-caf/sdm845', 'hardware/qcom-caf/sm8150',
-        'hardware/qcom-caf/sm8250', 'hardware/qcom-caf/sm8350', 'hardware/qcom-caf/sm8450', 'hardware/qcom-caf/sm8550',
+        'hardware/qcom-caf/sm8250', 'hardware/qcom-caf/sm8450', 'hardware/qcom-caf/sm8550',
         'hardware/qcom/sdm845', 'hardware/qcom/sm7250', 'hardware/qcom/sm8150', 'hardware/qcom/media/msm8996',
         'hardware/qcom/media/msm8998', 'hardware/qcom/gps/msm8996', 'hardware/qcom/gps/msm8998', 'hardware/qcom/data/ipacfg-mgr/msm8998/'
     ]

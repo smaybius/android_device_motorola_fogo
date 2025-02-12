@@ -635,16 +635,13 @@ vendor/bin/hw/android.hardware.memtrack@1.0-service
 vendor/bin/hw/com.motorola.hardware.display.panel@1.1-service
 vendor/bin/hw/com.motorola.hardware.display.touch@1.4-service
 vendor/bin/hw/vendor.display.color@1.0-service
-vendor/bin/hw/vendor.qti.hardware.display.allocator-service
 vendor/bin/hw/vendor.qti.hardware.display.composer-service
 vendor/etc/init/android.hardware.memtrack@1.0-service.rc
 vendor/etc/init/com.motorola.hardware.display.panel@1.1-service.rc
 vendor/etc/init/com.motorola.hardware.display.touch@1.4-service.rc
 vendor/etc/init/vendor.display.color@1.0-service.rc
-vendor/etc/init/vendor.qti.hardware.display.allocator-service.rc
 vendor/etc/init/vendor.qti.hardware.display.composer-service.rc
 -vendor/etc/vintf/manifest/android.hardware.graphics.mapper-impl-qti-display.xml
--vendor/etc/vintf/manifest/vendor.qti.hardware.display.allocator-service.xml
 -vendor/etc/vintf/manifest/vendor.qti.hardware.display.composer-service.xml
 vendor/lib/egl/eglSubDriverAndroid.so
 vendor/lib/egl/libEGL_adreno.so;SYMLINK=vendor/lib/libEGL_adreno.so
@@ -663,18 +660,12 @@ vendor/lib/libdisplaydebug.so
 vendor/lib/libdisplayqos.so
 vendor/lib/libdisplayskuutils.so
 vendor/lib/libdrmutils.so
-vendor/lib/libgpu_tonemapper.so
-vendor/lib/libgralloccore.so
-vendor/lib/libgrallocutils.so
 vendor/lib/libgsl.so
 vendor/lib/libllvm-glnext.so
-vendor/lib/libqdutils.so
-vendor/lib/libqservice.so
 vendor/lib/libsdedrm.so
 vendor/lib/libsdm-color.so
 vendor/lib/libsdm-diag.so
 vendor/lib/libsdm-disp-vndapis.so
-vendor/lib/libsdmcore.so
 vendor/lib/libsdmextension.so
 vendor/lib/libsdmutils.so
 vendor/lib/libtinyxml2_1.so
@@ -707,19 +698,13 @@ vendor/lib64/libdisplaydebug.so
 vendor/lib64/libdisplayqos.so
 vendor/lib64/libdisplayskuutils.so
 vendor/lib64/libdrmutils.so
-vendor/lib64/libgpu_tonemapper.so
-vendor/lib64/libgralloccore.so
-vendor/lib64/libgrallocutils.so
 vendor/lib64/libgsl.so
 vendor/lib64/libhistogram.so
 vendor/lib64/libllvm-glnext.so
-vendor/lib64/libqdutils.so
-vendor/lib64/libqservice.so
 vendor/lib64/libsdedrm.so
 vendor/lib64/libsdm-color.so
 vendor/lib64/libsdm-diag.so
 vendor/lib64/libsdm-disp-vndapis.so
-vendor/lib64/libsdmcore.so
 vendor/lib64/libsdmextension.so
 vendor/lib64/libsdmutils.so
 vendor/lib64/libtinyxml2_1.so
@@ -1175,11 +1160,9 @@ vendor/lib64/libqti-util.so
 
 # Perf IOP
 vendor/lib/libqti-iopd-client.so
-vendor/lib/libqti-perfd-client.so
 vendor/lib/vendor.qti.hardware.iop@1.0.so
 vendor/lib/vendor.qti.hardware.iop@2.0.so
 vendor/lib64/libqti-iopd-client.so
-vendor/lib64/libqti-perfd-client.so
 vendor/lib64/vendor.qti.hardware.iop@1.0.so
 vendor/lib64/vendor.qti.hardware.iop@2.0.so
 
@@ -1754,7 +1737,6 @@ vendor/lib64/motorola.hardware.vibrator@1.0.so
 
 # Wi-Fi
 vendor/bin/hw/android.hardware.wifi@1.0-service
-vendor/bin/hw/hostapd
 vendor/bin/cnss-daemon
 vendor/etc/init/android.hardware.wifi@1.0-service.rc
 vendor/etc/init/vendor.qti.hardware.wifi.wifilearner@1.0-service.rc
@@ -1840,7 +1822,6 @@ vendor/bin/TBaseDeviceBinding
 vendor/bin/aplogcat
 vendor/bin/aplogd
 vendor/bin/athdiag
-vendor/bin/audioadsprpcd
 vendor/bin/audioflacapp
 vendor/bin/batch
 vendor/bin/batt_health
@@ -2199,7 +2180,6 @@ vendor/lib/libQTEEConnector_listener.so
 vendor/lib/libTBaseProvisioning.so
 vendor/lib/libVkLayer_q3dtools.so
 vendor/lib/lib_modemapi_qc_hidl.so
-vendor/lib/liba2dpoffload.so
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
 vendor/lib/libacdbrtac.so
@@ -2217,7 +2197,6 @@ vendor/lib/libaudioconfigstore.so
 vendor/lib/libaudioparsers.so
 vendor/lib/libbase64.so
 vendor/lib/libbatching.so
-vendor/lib/libbatterylistener.so
 vendor/lib/libboot_control_qti.so
 vendor/lib/libbt-hidlclient.so
 vendor/lib/libbtnv.so
@@ -2228,10 +2207,8 @@ vendor/lib/libcapiv2svacnn.so
 vendor/lib/libcapiv2svarnn.so
 vendor/lib/libcapiv2vop.so
 vendor/lib/libcdfw.so
-vendor/lib/libcirrusspkrprot.so
 vendor/lib/libcneoplookup.so
 vendor/lib/libcneqmiutils.so
-vendor/lib/libcomprcapture.so
 vendor/lib/libcppf.so
 vendor/lib/libcvp_common.so
 vendor/lib/libcvpcpuRev_skel.so
@@ -2241,7 +2218,6 @@ vendor/lib/libdpps.so
 vendor/lib/libdrc.so
 vendor/lib/libdrmtime.so
 vendor/lib/libdsd2pcm.so
-vendor/lib/libexthwplugin.so
 vendor/lib/libfastcrc.so
 vendor/lib/libgarden.so
 vendor/lib/libgcs-calwrapper.so
@@ -2255,11 +2231,8 @@ vendor/lib/libgpudataproducer.so
 vendor/lib/libhdcp1prov.so
 vendor/lib/libhdcp2p2prov.so
 vendor/lib/libhdcpsrm.so
-vendor/lib/libhdmiedid.so
-vendor/lib/libhdmipassthru.so
 vendor/lib/libhdr_stub.so
 vendor/lib/libhdr_tm.so
-vendor/lib/libhfp.so
 vendor/lib/libipebpsstriping.so
 vendor/lib/libipebpsstriping170.so
 vendor/lib/libiqi_bridge.so
@@ -2341,11 +2314,9 @@ vendor/lib/libsn100u_fw.so
 vendor/lib/libsn220u_fw.so
 vendor/lib/libsnapdragoncolor-manager.so
 vendor/lib/libsnapdragoncolor-qdcm.so
-vendor/lib/libsndmonitor.so
 vendor/lib/libsns_low_lat_stream_stub.so
 vendor/lib/libsns_registry_skel.so
 vendor/lib/libsoc_helper_jni.so
-vendor/lib/libspkrprot.so
 vendor/lib/libssc_default_listener.so
 vendor/lib/libssd.so
 vendor/lib/libstfactory-vendor.so
@@ -2388,7 +2359,6 @@ vendor/lib64/libGPreqcancel_svc.so
 vendor/lib64/libI420colorconvert.so
 vendor/lib64/libQTEEConnector_listener.so
 vendor/lib64/libVkLayer_q3dtools.so
-vendor/lib64/liba2dpoffload.so
 vendor/lib64/libacdb-fts.so
 vendor/lib64/libacdbloader.so
 vendor/lib64/libacdbrtac.so
@@ -2407,7 +2377,6 @@ vendor/lib64/libaudioconfigstore.so
 vendor/lib64/libaudioparsers.so
 vendor/lib64/libbase64.so
 vendor/lib64/libbatching.so
-vendor/lib64/libbatterylistener.so
 vendor/lib64/libboot_control_qti.so
 vendor/lib64/libbt-hidlclient.so
 vendor/lib64/libbtnv.so
@@ -2418,12 +2387,10 @@ vendor/lib64/libcapiv2svacnn.so
 vendor/lib64/libcapiv2svarnn.so
 vendor/lib64/libcapiv2vop.so
 vendor/lib64/libcdfw.so
-vendor/lib64/libcirrusspkrprot.so
 vendor/lib64/libcneoplookup.so
 vendor/lib64/libcneqmiutils.so
 vendor/lib64/libcodec2_soft_ac4dec.so
 vendor/lib64/libcodec2_soft_ddpdec.so
-vendor/lib64/libcomprcapture.so
 vendor/lib64/libcvp_common.so
 vendor/lib64/libcvpcpuRev_skel.so
 vendor/lib64/libdiagjni.so
@@ -2431,7 +2398,6 @@ vendor/lib64/libdisp-aba.so
 vendor/lib64/libdpps.so
 vendor/lib64/libdrmtime.so
 vendor/lib64/libembmsservice.so
-vendor/lib64/libexthwplugin.so
 vendor/lib64/libgameoptfeature.so
 vendor/lib64/libgarden.so
 vendor/lib64/libgarden_haltests_e2e.so
@@ -2446,11 +2412,8 @@ vendor/lib64/libgpudataproducer.so
 vendor/lib64/libhdcp1prov.so
 vendor/lib64/libhdcp2p2prov.so
 vendor/lib64/libhdcpsrm.so
-vendor/lib64/libhdmiedid.so
-vendor/lib64/libhdmipassthru.so
 vendor/lib64/libhdr_stub.so
 vendor/lib64/libhdr_tm.so
-vendor/lib64/libhfp.so
 vendor/lib64/libipebpsstriping.so
 vendor/lib64/libipebpsstriping170.so
 vendor/lib64/libiqi_bridge.so
@@ -2541,11 +2504,9 @@ vendor/lib64/libsn100u_fw.so
 vendor/lib64/libsn220u_fw.so
 vendor/lib64/libsnapdragoncolor-manager.so
 vendor/lib64/libsnapdragoncolor-qdcm.so
-vendor/lib64/libsndmonitor.so
 vendor/lib64/libsns_low_lat_stream_stub.so
 vendor/lib64/libsns_registry_skel.so
 vendor/lib64/libsoc_helper_jni.so
-vendor/lib64/libspkrprot.so
 vendor/lib64/libsplh.so
 vendor/lib64/libssc_default_listener.so
 vendor/lib64/libssd.so
