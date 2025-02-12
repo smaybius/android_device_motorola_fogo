@@ -22,6 +22,7 @@ from extract_utils.main import (
 
 namespace_imports = [
     "device/motorola/fogo",
+    'hardware/qcom-caf/sm8350',
     "hardware/qcom-caf/wlan",
     "hardware/motorola",
     "vendor/qcom/opensource/commonsys/display",
