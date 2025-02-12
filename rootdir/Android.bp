@@ -180,20 +180,8 @@ sh_binary {
 }
 
 sh_binary {
-    name: "init.qcom.usb.sh",
-    src: "bin/init.qcom.usb.sh",
-    vendor: true,
-}
-
-sh_binary {
     name: "init.qti.chg_policy.sh",
     src: "bin/init.qti.chg_policy.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.qti.display_boot.sh",
-    src: "bin/init.qti.display_boot.sh",
     vendor: true,
 }
 
@@ -338,13 +326,6 @@ prebuilt_etc {
 prebuilt_etc {
     name: "init.qcom.rc",
     src: "etc/init.qcom.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.qcom.usb.rc",
-    src: "etc/init.qcom.usb.rc",
     sub_dir: "init/hw",
     vendor: true,
 }
