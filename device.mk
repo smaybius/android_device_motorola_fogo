@@ -248,22 +248,12 @@ PRODUCT_PACKAGES += \
 
 # Unorganized
 PRODUCT_PACKAGES += \
-    liba2dpoffload \
-    libbatterylistener \
-    libcirrusspkrprot \
-    libcomprcapture \
-    libexthwplugin \
     libgpu_tonemapper \
     libgralloccore \
     libgrallocutils \
-    libhdmiedid \
-    libhdmipassthru \
-    libhfp \
     libqdutils \
     libqservice \
     libsdmcore \
-    libsndmonitor \
-    libspkrprot \
     libtinyxml \
     libvulkan
 
