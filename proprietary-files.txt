@@ -101,20 +101,12 @@ vendor/lib64/soundfx/libswgamedap.so
 vendor/lib64/libdlbpreg.so
 
 # Audio configs
-vendor/etc/audio/audio_policy_configuration.xml
-vendor/etc/a2dp_audio_policy_configuration.xml
 vendor/etc/audio_effects.xml
 vendor/etc/audio_io_policy.conf
 vendor/etc/audio_platform_info.xml
-vendor/etc/audio_policy_configuration.xml
-vendor/etc/audio_policy_volumes.xml
-vendor/etc/bluetooth_qti_audio_policy_configuration.xml
-vendor/etc/default_volume_tables.xml
 vendor/etc/mixer_paths.xml
-vendor/etc/r_submix_audio_policy_configuration.xml
 vendor/etc/sound_trigger_mixer_paths.xml
 vendor/etc/sound_trigger_platform_info.xml
-vendor/etc/usb_audio_policy_configuration.xml
 
 # Automotive
 vendor/lib/vendor.qti.hardware.automotive.vehicle@1.0.so
@@ -634,9 +626,7 @@ vendor/etc/init/android.hardware.memtrack@1.0-service.rc
 vendor/etc/init/com.motorola.hardware.display.panel@1.1-service.rc
 vendor/etc/init/com.motorola.hardware.display.touch@1.4-service.rc
 vendor/etc/init/vendor.display.color@1.0-service.rc
-vendor/etc/init/vendor.qti.hardware.display.composer-service.rc
 -vendor/etc/vintf/manifest/android.hardware.graphics.mapper-impl-qti-display.xml
--vendor/etc/vintf/manifest/vendor.qti.hardware.display.composer-service.xml
 vendor/lib/egl/eglSubDriverAndroid.so
 vendor/lib/egl/libEGL_adreno.so;SYMLINK=vendor/lib/libEGL_adreno.so
 vendor/lib/egl/libGLESv1_CM_adreno.so
@@ -954,7 +944,6 @@ vendor/etc/init/motorola.hardware.input@1.0-service.rc
 vendor/lib64/motorola.hardware.input@1.0.so
 
 # IPA
-vendor/etc/IPACM_cfg.xml
 
 # IPA firmware
 vendor/etc/init/ipa_fws.rc
@@ -1937,7 +1926,6 @@ vendor/etc/init/imsdaemon.rc
 vendor/etc/init/init.embmssl_server.rc
 vendor/etc/init/init.gf_ident.rc
 vendor/etc/init/init.qdmastats.rc
-vendor/etc/init/init.qti.display_boot.rc
 vendor/etc/init/init.qti.fm.rc
 vendor/etc/init/init.qti.media.rc
 vendor/etc/init/init.qti.qcv.rc
@@ -2053,7 +2041,6 @@ vendor/etc/fstab_zramwriteback.qcom
 vendor/etc/gnss_antenna_info.conf
 vendor/etc/gpfspath_oem_config.xml
 vendor/etc/init.qti.fm.sh
-vendor/etc/mkshrc
 vendor/etc/msm_irqbalance.conf
 vendor/etc/nfc_calibration.txt
 vendor/etc/public.libraries.txt
@@ -2062,8 +2049,6 @@ vendor/etc/sec_config
 vendor/etc/simlock_template.dat
 vendor/etc/smomo_setting.xml
 vendor/etc/snapdragon_color_libs_config.xml
-vendor/etc/task_profiles.json
-vendor/etc/ueventd.rc
 vendor/etc/vhw.xml
 vendor/etc/video_system_specs.json
 vendor/etc/wfd.hdcp.bin
@@ -2521,4 +2506,3 @@ vendor/usr/keylayout/ReadyForAirRemote_Consumer_Control.kl
 vendor/usr/keylayout/ReadyForAirRemote_Keyboard.kl
 vendor/usr/keylayout/uinput-fpc.kl
 vendor/usr/keylayout/uinput_nav.kl
-vendor/ueventd.rc
