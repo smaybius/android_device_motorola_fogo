@@ -2,7 +2,7 @@ import os
 
 # Define the directories to be skipped
 SKIP_DIRS = {
-    'device', 'vendor/motorola/fogo', 'out', 'vendor', 'hardware/qcom-caf/msm8953', 'hardware/qcom-caf/msm8996',
+    'device', 'vendor/motorola/fogo', 'out', 'hardware/qcom-caf/msm8953', 'hardware/qcom-caf/msm8996',
     'hardware/qcom-caf/msm8998', 'hardware/qcom-caf/sdm660', 'hardware/qcom-caf/sdm845', 'hardware/qcom-caf/sm8150',
     'hardware/qcom-caf/sm8250', 'hardware/qcom-caf/sm8450', 'hardware/qcom-caf/sm8550',
     'hardware/qcom/sdm845', 'hardware/qcom/sm7250', 'hardware/qcom/sm8150', 'hardware/qcom/data/ipacfg-mgr/msm8998'

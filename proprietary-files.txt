@@ -276,8 +276,6 @@ vendor/lib/libcamxswprocessalgo.so
 vendor/lib/libcamxtintlessalgo.so
 vendor/lib/libchilog.so
 vendor/lib/libcom.qti.chinodeutils.so
-vendor/lib/libdisplayconfig.qti.so
-vendor/lib/libgralloc.qti.so
 vendor/lib/libmmcamera_bestats.so
 vendor/lib/libmmcamera_cac3.so
 vendor/lib/libmmcamera_faceproc.so
@@ -290,7 +288,6 @@ vendor/lib/libmot_afd.so
 vendor/lib/libofflinedump.so
 vendor/lib/libofflinelog.so
 vendor/lib/libopencv.so
-vendor/lib/libqdMetaData.so
 vendor/lib/libqmi_cci.so
 vendor/lib/libqmi_common_so.so
 vendor/lib/libqmi_encdec.so
@@ -430,8 +427,6 @@ vendor/lib64/libcamxswprocessalgo.so
 vendor/lib64/libcamxtintlessalgo.so
 vendor/lib64/libchilog.so
 vendor/lib64/libcom.qti.chinodeutils.so
-vendor/lib64/libdisplayconfig.qti.so
-vendor/lib64/libgralloc.qti.so
 vendor/lib64/libhdr_impl.so
 vendor/lib64/libmmcamera_bestats.so
 vendor/lib64/libmmcamera_cac3.so
@@ -445,7 +440,6 @@ vendor/lib64/libmot_afd.so
 vendor/lib64/libofflinedump.so
 vendor/lib64/libofflinelog.so
 vendor/lib64/libopencv.so
-vendor/lib64/libqdMetaData.so
 vendor/lib64/libqmi_cci.so
 vendor/lib64/libqmi_common_so.so
 vendor/lib64/libqmi_encdec.so
@@ -960,13 +954,7 @@ vendor/etc/init/motorola.hardware.input@1.0-service.rc
 vendor/lib64/motorola.hardware.input@1.0.so
 
 # IPA
-vendor/bin/ipacm
-vendor/bin/ipacm-diag
-vendor/etc/init/ipacm-diag.rc
-vendor/etc/init/ipacm.rc
 vendor/etc/IPACM_cfg.xml
-vendor/lib64/libipanat.so
-vendor/lib64/liboffloadhal.so
 
 # IPA firmware
 vendor/etc/init/ipa_fws.rc
@@ -1295,7 +1283,6 @@ vendor/lib/libqsocket.so
 vendor/lib/libril-db.so
 vendor/lib/libril-qcril-hook-oem.so
 vendor/lib/librilqmimiscservices.so
-vendor/lib/librmnetctl.so
 vendor/lib/libsystem_health_mon.so
 vendor/lib/libxml.so
 vendor/lib/qcrilMarshal.so
@@ -1349,7 +1336,6 @@ vendor/lib64/libqsocket.so
 vendor/lib64/libril-db.so
 vendor/lib64/libril-qcril-hook-oem.so
 vendor/lib64/librilqmimiscservices.so
-vendor/lib64/librmnetctl.so
 vendor/lib64/libsystem_health_mon.so
 vendor/lib64/libxml.so
 vendor/lib64/qcrilMarshal.so
@@ -1732,7 +1718,6 @@ vendor/etc/init/vendor.qti.hardware.vibrator.service.rc
 vendor/lib/hw/motorola.hardware.vibrator@1.0-impl.so
 vendor/lib/motorola.hardware.vibrator@1.0.so
 vendor/lib64/hw/motorola.hardware.vibrator@1.0-impl.so
-vendor/lib64/libqtivibratoreffect.so
 vendor/lib64/motorola.hardware.vibrator@1.0.so
 
 # Wi-Fi
@@ -1773,7 +1758,6 @@ vendor/lib/libmiracast.so
 vendor/lib/libmm-hdcpmgr.so
 vendor/lib/libmmrtpdecoder_proprietary.so
 vendor/lib/libmmrtpencoder_proprietary.so
-vendor/lib/libwfdaac_vendor.so
 vendor/lib/libwfdcodecv4l2_proprietary.so
 vendor/lib/libwfdconfigutils_proprietary.so
 vendor/lib/libwfdhdcpcp.so
