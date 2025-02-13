@@ -45,6 +45,7 @@ lib_fixups: lib_fixups_user_type = {
     libs_add_vendor_suffix: lib_fixup_vendor_suffix,
     (
         'libqsap_sdk',
+        'libwpa_client',
     ): lib_fixup_remove,
 }
 
