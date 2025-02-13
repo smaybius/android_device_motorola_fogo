@@ -510,7 +510,6 @@ vendor/lib/libcneapiclient.so
 vendor/lib/libdiag.so
 vendor/lib/libidl.so
 vendor/lib/libqmiservices.so
-vendor/lib/libwpa_client.so
 vendor/lib/vendor.qti.data.factory@2.0.so
 vendor/lib/vendor.qti.data.factory@2.1.so
 vendor/lib/vendor.qti.data.factory@2.2.so
@@ -537,7 +536,6 @@ vendor/lib64/libcneapiclient.so
 vendor/lib64/libdiag.so
 vendor/lib64/libidl.so
 vendor/lib64/libqmiservices.so
-vendor/lib64/libwpa_client.so
 vendor/lib64/vendor.qti.data.factory@2.0.so
 vendor/lib64/vendor.qti.data.factory@2.1.so
 vendor/lib64/vendor.qti.data.factory@2.2.so

@@ -31,6 +31,12 @@ def find_local_module_matches(root_dir, proprietary_files_path, skip_dirs):
                                 if local_module == prop_file_base:
                                     match = f'{prop_file} matches {os.path.join(dirpath, filename)}:{line.strip()}'
                                     matches.append(match)
+                        elif 'LOCAL_MODULE =' in line or 'LOCAL_MODULE=' in line:
+                            local_module = line.split('=')[1].strip()
+                            for prop_file, prop_file_base in zip(proprietary_files, proprietary_files_base):
+                                if local_module == prop_file_base:
+                                    match = f'{prop_file} matches {os.path.join(dirpath, filename)}:{line.strip()}'
+                                    matches.append(match)
     return matches
 
 def main():
