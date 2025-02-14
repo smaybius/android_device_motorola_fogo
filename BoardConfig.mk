@@ -4,6 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+BOARD_VENDOR := motorola
+
 DEVICE_PATH := device/motorola/fogo
 BUILD_BROKEN_DUP_RULES := true
 
@@ -68,9 +70,6 @@ TARGET_USES_QTI_MAPPER_2_0 := true
 TARGET_USES_QTI_MAPPER_EXTENSIONS_1_1 := true
 TARGET_USES_COLOR_METADATA := true
 
-# DTB
-BOARD_DTBO_CONFIG_DIR := $(DEVICE_PATH)/dtbo
-
 # DRM
 TARGET_ENABLE_MEDIADRM_WIDEVINE_L1 := true
 
@@ -98,7 +97,6 @@ BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0x04C8
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_KERNEL_IMAGE_NAME := Image
-BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_RAMDISK_USE_LZ4 := true
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
@@ -110,6 +108,12 @@ TARGET_KERNEL_CONFIG := \
 TARGET_KERNEL_SOURCE := kernel/motorola/fogo
 # With GCC enabled, the error occurs: error: version 'kernel' in target triple 'arm-unknown-linux-androidkernel' is invalid. GCC disabled in other smx3xx device repos
 TARGET_KERNEL_NO_GCC := true
+
+# Kernel Modules
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load))
+BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(DEVICE_PATH)/modules.blocklist
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load.recovery))
+BOOT_KERNEL_MODULES := $(BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD)
 
 # Keymaster
 TARGET_PROVIDES_KEYMASTER := true
