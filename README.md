@@ -1,3 +1,6 @@
+Tips for adding a device with a Qualcomm SMx3xx chipset (SM8350, SM6375, etc):
+- Only use other SMx3xx devices as references, something that the maintainer learned late into development.
+
 # Device configuration for Motorola G 5G 2024
 
 ## Device specifications
