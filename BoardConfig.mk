@@ -100,10 +100,7 @@ BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_RAMDISK_USE_LZ4 := true
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
-TARGET_KERNEL_CONFIG := \
-    vendor/holi-qgki_defconfig \
-    vendor/ext_config/moto-holi.config \
-    vendor/ext_config/moto-holi-fogo.config
+TARGET_KERNEL_CONFIG := fogo_defconfig
 
 TARGET_KERNEL_SOURCE := kernel/motorola/fogo
 # With GCC enabled, the error occurs: error: version 'kernel' in target triple 'arm-unknown-linux-androidkernel' is invalid. GCC disabled in other smx3xx device repos
