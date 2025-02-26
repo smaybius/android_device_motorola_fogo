@@ -4,7 +4,7 @@
     "target_path": "hardware/motorola"
   },
   {
-    "repository": "android_kernel_motorola_fogo",
-    "target_path": "kernel/motorola/fogo"
+    "repository": "android_kernel_motorola_sm4375",
+    "target_path": "kernel/motorola/sm4375"
   }
 ]

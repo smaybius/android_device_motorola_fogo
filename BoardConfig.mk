@@ -103,7 +103,7 @@ BOARD_RAMDISK_USE_LZ4 := true
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
 TARGET_KERNEL_CONFIG := fogo_defconfig
 
-TARGET_KERNEL_SOURCE := kernel/motorola/fogo
+TARGET_KERNEL_SOURCE := kernel/motorola/sm4375
 # With GCC enabled, the error occurs: error: version 'kernel' in target triple 'arm-unknown-linux-androidkernel' is invalid. GCC disabled in other smx3xx device repos
 TARGET_KERNEL_NO_GCC := true
 
