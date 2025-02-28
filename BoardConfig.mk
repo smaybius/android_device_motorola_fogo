@@ -12,10 +12,15 @@ BUILD_BROKEN_DUP_RULES := true
 # A/B
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
+    boot \
+    dtbo \
     product \
     system \
     system_ext \
-    vendor
+    vbmeta \
+    vbmeta_system \
+    vendor \
+    vendor_boot
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
