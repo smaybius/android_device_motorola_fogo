@@ -1,6 +1,6 @@
 Tips for adding a device with a Qualcomm SMx3xx chipset (SM8350, SM6375, etc):
 - Only use other SMx3xx devices as references, something that the maintainer learned late into development.
-
+- If your device or its SOC has never been heard of before, then there's most likely already an SMxnxx-common repo, where the second digit of the SOC number matters. The easy way is to use aospdtgen, and then follow the other device trees that inherit from that same device_(OEM)_(SOC)-common repo even if or though the HIDLs (the extra folders) don't have an explicit origin. device_motorola_SM7325-common is chosen because SM6375-common inherits it, and all the other SMx3xx devices inherit it too.
 # Device configuration for Motorola G 5G 2024
 
 ## Device specifications
