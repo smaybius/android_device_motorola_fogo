@@ -3,6 +3,7 @@
 # SPDX-FileCopyrightText: 2024 The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
 #
+# Tip: Add --only-target to the end of the line that executes this file, to not nag about nonexistent proprietary-files.
 
 from extract_utils.extract import extract_fns_user_type
 from extract_utils.extract_star import extract_star_firmware
