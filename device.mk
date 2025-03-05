@@ -4,24 +4,14 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-PRODUCT_NAME := lineage_fogo
-PRODUCT_DEVICE := fogo
-PRODUCT_BRAND := motorola
-PRODUCT_MODEL := Moto G 5G (2024)
+# A/B
+TARGET_IS_VAB := true
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
-# A/B
-$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
-
-# Add common definitions for Qualcomm
-$(call inherit-product, hardware/qcom-caf/common/common.mk)
-
-PRODUCT_PACKAGES += \
-    android.hardware.boot@1.2-impl \
-    android.hardware.boot@1.2-impl.recovery \
-    android.hardware.boot@1.2-service
+# Inherit from motorola sm7325-common
+$(call inherit-product, device/motorola/sm7325-common/common.mk)
 
 PRODUCT_PACKAGES += \
     update_engine \
@@ -29,23 +19,14 @@ PRODUCT_PACKAGES += \
     update_verifier
 
 AB_OTA_POSTINSTALL_CONFIG += \
-    RUN_POSTINSTALL_system=true \
-    POSTINSTALL_PATH_system=system/bin/otapreopt_script \
     FILESYSTEM_TYPE_system=erofs \
-    POSTINSTALL_OPTIONAL_system=true
 
 AB_OTA_POSTINSTALL_CONFIG += \
-    RUN_POSTINSTALL_vendor=true \
-    POSTINSTALL_PATH_vendor=bin/checkpoint_gc \
     FILESYSTEM_TYPE_vendor=erofs \
-    POSTINSTALL_OPTIONAL_vendor=true
 
 PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
-
-PRODUCT_PACKAGES += \
-    libqsap_sdk
 
 # API levels
 PRODUCT_SHIPPING_API_LEVEL := 34
@@ -56,18 +37,7 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    android.hardware.audio@6.0-impl \
-    android.hardware.audio.effect@6.0-impl \
-    android.hardware.audio.service \
-    android.hardware.bluetooth.audio-impl \
-    android.hardware.soundtrigger@2.3-impl \
-    audio.bluetooth.default \
-    audio.r_submix.default \
-    audio.usb.default \
-    audioadsprpcd \
     libqcompostprocbundle \
-    libqcomvisualizer \
-    libqcomvoiceprocessing \
     libvolumelistener
 
 AUDIO_HAL_DIR := hardware/qcom-caf/sm8350/audio
@@ -130,25 +100,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcamera2ndk_vendor
 
-# fastbootd
-PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.1-impl-mock \
-    fastbootd
-
-# Health
-PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-service
-
-# Kernel
-PRODUCT_ENABLE_UFFD_GC := false
-
-# Overlays
-PRODUCT_ENFORCE_RRO_TARGETS := *
-
-# Partitions
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
-
 # Perf
 PRODUCT_PACKAGES += \
     libqti-perfd-client \
@@ -190,7 +141,6 @@ PRODUCT_PACKAGES += \
     init.qcom.sdio.sh \
     init.qcom.sensors.sh \
     init.qcom.sh \
-    init.qcom.usb.sh \
     init.qti.chg_policy.sh \
     init.qti.display_boot.sh \
     init.qti.early_init.sh \
@@ -205,7 +155,6 @@ PRODUCT_PACKAGES += \
     vendor_modprobe.sh \
 
 PRODUCT_PACKAGES += \
-    fstab.qcom \
     init.mmi.charge_only.rc \
     init.mmi.chipset.rc \
     init.mmi.debug.rc \
@@ -257,16 +206,11 @@ PRODUCT_PACKAGES += \
     libtinyxml \
     libvulkan
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_VENDOR_RAMDISK_OUT)/first_stage_ramdisk/fstab.qcom
-
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH) \
     hardware/motorola \
     hardware/lineage/interfaces/power-libperfmgr \
     hardware/qcom-caf/common/libqti-perfd-client \
-    vendor/qcom/opensource/usb/etc \
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/motorola/fogo/fogo-vendor.mk)

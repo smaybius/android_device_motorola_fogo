@@ -1,0 +1,14 @@
+service vendor.light /vendor/bin/hw/android.hardware.lights-service.fogo
+    class hal
+    user system
+    group system
+    shutdown critical
+
+on boot
+    # Change ownership and permission for leds backlight
+    chown system system /sys/class/leds/charging/brightness
+    chmod 0664 /sys/class/leds/charging/brightness
+
+    # change permission of red leds
+    chown system system /sys/class/leds/red/brightness
+    chmod 0664 /sys/class/leds/red/brightness
