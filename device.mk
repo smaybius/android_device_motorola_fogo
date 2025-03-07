@@ -210,7 +210,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     hardware/motorola \
     hardware/lineage/interfaces/power-libperfmgr \
-    hardware/qcom-caf/common/libqti-perfd-client \
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/motorola/fogo/fogo-vendor.mk)

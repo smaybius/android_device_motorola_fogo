@@ -612,7 +612,6 @@ product/media/audio/ringtones/Natural.ogg
 product/media/audio/ringtones/Simple.ogg
 
 # Soundtrigger
-vendor/lib64/hw/sound_trigger.primary.holi.so
 vendor/lib64/vendor.qti.voiceprint@1.0.so
 
 # Thermal
