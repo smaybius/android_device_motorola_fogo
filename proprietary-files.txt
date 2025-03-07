@@ -300,31 +300,19 @@ vendor/lib64/vendor.trustonic.tee@1.1.so
 vendor/lib64/vendor.trustonic.teeregistry@1.0.so
 
 # GNSS
-vendor/bin/hw/android.hardware.gnss@2.1-service-qti
-vendor/etc/init/android.hardware.gnss@2.1-service-qti.rc
--vendor/etc/vintf/manifest/android.hardware.gnss@2.1-service-qti.xml
 -vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml
 vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so
 vendor/lib64/libasn1cper.so
 vendor/lib64/libasn1crt.so
 vendor/lib64/libasn1crtx.so
 vendor/lib64/libgdtap.so
-vendor/lib64/libgps.utils.so
 vendor/lib64/libjson.so
-vendor/lib64/libloc_core.so
-vendor/lib64/liblocation_api.so
 vendor/lib64/libxtwifi_server_protocol.so
 vendor/lib64/libxtwifi_server_protocol_uri_v3.so
 vendor/lib64/vendor.qti.gnss@4.0-service.so
 
 # GNSS configs
 vendor/etc/apdr.conf
-vendor/etc/flp.conf
-vendor/etc/gps.conf
-vendor/etc/izat.conf
-vendor/etc/lowi.conf
-vendor/etc/sap.conf
-vendor/etc/xtwifi.conf
 
 # Health
 vendor/bin/hw/motorola.hardware.health.storage@1.0-service
@@ -807,8 +795,6 @@ vendor/etc/motorola/mdmctbk/ctbk_cfg.xml
 vendor/etc/motorola/tcmd/cid_template.dat
 vendor/etc/motorola/tcmd/cid_template.locked
 vendor/etc/motorola/tcmd/cid_template.unlocked
-vendor/etc/seccomp_policy/gnss@2.0-base.policy
-vendor/etc/seccomp_policy/gnss@2.0-xtra-daemon.policy
 vendor/etc/seccomp_policy/gnss@2.0-xtwifi-client.policy
 vendor/etc/seccomp_policy/gnss@2.0-xtwifi-inet-agent.policy
 vendor/etc/tetras/portrait_repair_composite.model
@@ -830,7 +816,6 @@ vendor/etc/cacert_location.pem
 vendor/etc/excluded-input-devices.xml
 vendor/etc/fstab.qcom
 vendor/etc/fstab_zramwriteback.qcom
-vendor/etc/gnss_antenna_info.conf
 vendor/etc/gpfspath_oem_config.xml
 vendor/etc/init.qti.fm.sh
 vendor/etc/nfc_calibration.txt
@@ -893,7 +878,6 @@ vendor/lib64/libaudioalsa.so
 vendor/lib64/libaudioconfigstore.so
 vendor/lib64/libaudioparsers.so
 vendor/lib64/libbase64.so
-vendor/lib64/libbatching.so
 vendor/lib64/libboot_control_qti.so
 vendor/lib64/libcamerapostproc.so
 vendor/lib64/libcneqmiutils.so
@@ -903,8 +887,6 @@ vendor/lib64/libdiagjni.so
 vendor/lib64/libembmsservice.so
 vendor/lib64/libgarden.so
 vendor/lib64/libgarden_haltests_e2e.so
-vendor/lib64/libgeofencing.so
-vendor/lib64/libgnss.so
 vendor/lib64/libgnsspps.so
 vendor/lib64/libhdcp1prov.so
 vendor/lib64/libhdcp2p2prov.so
@@ -914,7 +896,6 @@ vendor/lib64/libipebpsstriping.so
 vendor/lib64/libipebpsstriping170.so
 vendor/lib64/libiqi_bridge.so
 vendor/lib64/libjpege.so
-vendor/lib64/libloc_socket.so
 vendor/lib64/liblowi_wifihal.so
 vendor/lib64/liblowlight_ai_portrait.arcsoft.so
 vendor/lib64/libmctfengine_stub.so
