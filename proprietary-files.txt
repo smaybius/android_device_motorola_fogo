@@ -693,9 +693,7 @@ vendor/etc/wifi/wpa_supplicant_overlay.conf
 
 # Wi-Fi Display
 vendor/lib64/libDxHdcp.so
-vendor/lib64/libmiracast.so
 vendor/lib64/libmm-hdcpmgr.so
-vendor/lib64/libwfdhdcpcp.so
 vendor/lib64/vendor.qti.hardware.sigma_miracast@1.0.so
 
 # Miscellaneous
@@ -880,7 +878,6 @@ vendor/lib64/com.qualcomm.mcx.distortionmapper.so
 vendor/lib64/com.qualcomm.mcx.linearmapper.so
 vendor/lib64/com.qualcomm.mcx.policy.mfl.so
 vendor/lib64/com.qualcomm.qti.mcx.usecase.extension.so
-vendor/lib64/ftm_fm_lib.so
 vendor/lib64/libAlacSwDec.so
 vendor/lib64/libAncFaceDetect.so
 vendor/lib64/libApeSwDec.so
