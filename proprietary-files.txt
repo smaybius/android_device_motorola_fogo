@@ -300,16 +300,7 @@ vendor/lib64/vendor.trustonic.tee@1.1.so
 vendor/lib64/vendor.trustonic.teeregistry@1.0.so
 
 # GNSS
--vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml
-vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so
-vendor/lib64/libasn1cper.so
-vendor/lib64/libasn1crt.so
-vendor/lib64/libasn1crtx.so
-vendor/lib64/libgdtap.so
 vendor/lib64/libjson.so
-vendor/lib64/libxtwifi_server_protocol.so
-vendor/lib64/libxtwifi_server_protocol_uri_v3.so
-vendor/lib64/vendor.qti.gnss@4.0-service.so
 
 # GNSS configs
 vendor/etc/apdr.conf
@@ -885,9 +876,6 @@ vendor/lib64/libcodec2_soft_ac4dec.so
 vendor/lib64/libcodec2_soft_ddpdec.so
 vendor/lib64/libdiagjni.so
 vendor/lib64/libembmsservice.so
-vendor/lib64/libgarden.so
-vendor/lib64/libgarden_haltests_e2e.so
-vendor/lib64/libgnsspps.so
 vendor/lib64/libhdcp1prov.so
 vendor/lib64/libhdcp2p2prov.so
 vendor/lib64/libhdcpsrm.so
@@ -896,7 +884,6 @@ vendor/lib64/libipebpsstriping.so
 vendor/lib64/libipebpsstriping170.so
 vendor/lib64/libiqi_bridge.so
 vendor/lib64/libjpege.so
-vendor/lib64/liblowi_wifihal.so
 vendor/lib64/liblowlight_ai_portrait.arcsoft.so
 vendor/lib64/libmctfengine_stub.so
 vendor/lib64/libmemutils.so
@@ -935,14 +922,12 @@ vendor/lib64/librecovery_updater_msm.so
 vendor/lib64/libreffeature.so
 vendor/lib64/libremosaiclib.so
 vendor/lib64/librmsclib1.so
-vendor/lib64/libslimclient.so
 vendor/lib64/libsmemlog.so
 vendor/lib64/libsn100u_fw.so
 vendor/lib64/libsn220u_fw.so
 vendor/lib64/libsns_registry_skel.so
 vendor/lib64/libsoc_helper_jni.so
 vendor/lib64/libswregistrationalgo.so
-vendor/lib64/libsynergy_loc_api.so
 vendor/lib64/libsynx.so
 vendor/lib64/libsysmon_cdsp_skel.so
 vendor/lib64/libtcmd_diag.so
