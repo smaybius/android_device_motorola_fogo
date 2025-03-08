@@ -57,9 +57,6 @@ vendor/lib64/vendor.qti.hardware.automotive.vehicle@1.0.so
 vendor/lib64/hw/audio.bluetooth_qti.default.so
 vendor/lib64/com.qualcomm.qti.bluetooth_audio@1.0.so
 
-# Boot
--vendor/etc/vintf/manifest/android.hardware.boot@1.1.xml
-
 # Camera
 vendor/bin/hw/motorola.hardware.camera.imgtuner@2.0-service
 vendor/etc/init/motorola.hardware.camera.imgtuner@2.0-service.rc
@@ -213,14 +210,10 @@ vendor/etc/camera/vidhance_calibration
 vendor/etc/camera/vidhance_calibration_2rd
 
 # Display
-vendor/bin/hw/android.hardware.memtrack@1.0-service
 vendor/bin/hw/com.motorola.hardware.display.panel@1.1-service
 vendor/bin/hw/com.motorola.hardware.display.touch@1.4-service
-vendor/bin/hw/vendor.qti.hardware.display.composer-service
-vendor/etc/init/android.hardware.memtrack@1.0-service.rc
 vendor/etc/init/com.motorola.hardware.display.panel@1.1-service.rc
 vendor/etc/init/com.motorola.hardware.display.touch@1.4-service.rc
--vendor/etc/vintf/manifest/android.hardware.graphics.mapper-impl-qti-display.xml
 vendor/lib64/hw/com.motorola.hardware.display.panel@1.1-impl.so
 vendor/lib64/hw/displaypanel.default.so
 vendor/lib64/hw/memtrack.default.so
@@ -255,7 +248,7 @@ vendor/firmware/a660_zap.mdt
 # DRM
 vendor/bin/hw/android.hardware.drm@1.3-service.clearkey
 vendor/etc/init/android.hardware.drm@1.3-service.clearkey.rc
--vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.clearkey.xml
+vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.clearkey.xml
 vendor/lib64/liboemcrypto.so
 
 # DRM (Qualcomm Secure Execution Environment)
@@ -267,7 +260,7 @@ vendor/lib64/liboemcrypto.so
 # Dumpstate
 vendor/bin/hw/android.hardware.dumpstate@1.1-service.moto
 vendor/etc/init/android.hardware.dumpstate@1.1-service.moto.rc
--vendor/etc/vintf/manifest/android.hardware.dumpstate@1.1-service.moto.xml
+vendor/etc/vintf/manifest/android.hardware.dumpstate@1.1-service.moto.xml
 
 # Face
 vendor/lib64/vendor.qti.hardware.secureprocessor.common@1.0-helper.so
@@ -310,7 +303,6 @@ vendor/bin/hw/motorola.hardware.health.storage@1.0-service
 vendor/bin/hw/motorola.hardware.health@2.0-service
 vendor/etc/init/motorola.hardware.health.storage@1.0-service.rc
 vendor/etc/init/motorola.hardware.health@2.0-service.rc
--vendor/etc/vintf/manifest/android.hardware.health@2.1.xml
 vendor/lib64/libmotohid.so
 vendor/lib64/motorola.hardware.health.storage@1.0.so
 vendor/lib64/motorola.hardware.health@2.0.so
@@ -318,7 +310,7 @@ vendor/lib64/motorola.hardware.health@2.0.so
 # Input (Motorola)
 vendor/bin/hw/motorola.hardware.input@1.0-service
 vendor/etc/init/motorola.hardware.input@1.0-service.rc
--vendor/etc/vintf/manifest/motorola.hardware.input@1.0-service.xml
+vendor/etc/vintf/manifest/motorola.hardware.input@1.0-service.xml
 vendor/lib64/motorola.hardware.input@1.0.so
 
 # IPA
@@ -338,7 +330,7 @@ vendor/bin/hw/android.hardware.keymaster@4.0-service-qti
 # Light
 vendor/bin/hw/android.hardware.lights-service.qti
 vendor/etc/init/android.hardware.lights-qti.rc
--vendor/etc/vintf/manifest/android.hardware.lights-qti.xml
+vendor/etc/vintf/manifest/android.hardware.lights-qti.xml
 vendor/lib64/hw/lights.qcom.so
 
 # Local time
@@ -369,8 +361,8 @@ vendor/bin/hw/vendor.dolby.media.c2@1.0-service
 vendor/etc/dolby/dax-default.xml
 vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
 vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc
--vendor/etc/vintf/manifest/vendor.dolby.hardware.dms.xml
--vendor/etc/vintf/manifest/vendor.dolby.media.c2@1.0-service.xml
+vendor/etc/vintf/manifest/vendor.dolby.hardware.dms.xml
+vendor/etc/vintf/manifest/vendor.dolby.media.c2@1.0-service.xml
 vendor/lib64/libcodec2_store_dolby.so
 vendor/lib64/libdapparamstorage.so
 vendor/lib64/libdeccfg.so
@@ -436,8 +428,6 @@ vendor/lib64/vendor.qti.power.pasrmanager@1.0.so
 # Perf IOP
 
 # Power
-vendor/bin/hw/android.hardware.power-service
-vendor/etc/init/android.hardware.power-service.rc
 
 # Power configs
 
@@ -464,8 +454,6 @@ vendor/lib64/vendor.qti.hardware.radio.ims@1.10.so
 # RenderScript
 
 # Sensors
-vendor/etc/init/android.hardware.sensors@2.0-service-multihal.rc
--vendor/etc/vintf/manifest/android.hardware.sensors@2.0-multihal.xml
 vendor/lib64/sensors.moto.so
 vendor/lib64/sensors.ssc.so
 
@@ -498,7 +486,6 @@ vendor/etc/sensors/config/strait_mmc56x3x_0.json
 vendor/etc/sensors/config/strait_mn78xxx_0.json
 vendor/etc/sensors/config/strait_power_0.json
 vendor/etc/sensors/config/strait_qmc6308_0.json
-vendor/etc/sensors/proto/descriptor.proto
 vendor/etc/sensors/proto/mot_barocal.proto
 vendor/etc/sensors/proto/mot_camgest.proto
 vendor/etc/sensors/proto/mot_chopchop.proto
@@ -617,12 +604,12 @@ vendor/lib64/vendor.qti.voiceprint@1.0.so
 # Thermal
 vendor/bin/hw/android.hardware.thermal@2.0-service.qti
 vendor/etc/init/android.hardware.thermal@2.0-service.qti.rc
--vendor/etc/vintf/manifest/android.hardware.thermal@2.0-service.qti.xml
+vendor/etc/vintf/manifest/android.hardware.thermal@2.0-service.qti.xml
 
 # Thermal (Qualcomm)
 vendor/bin/hw/vendor.qti.hardware.limits@1.0-service
 vendor/etc/init/vendor.qti.hardware.limits@1.0-service.rc
--vendor/etc/vintf/manifest/vendor.qti.hardware.limits@1.0-service.xml
+vendor/etc/vintf/manifest/vendor.qti.hardware.limits@1.0-service.xml
 vendor/lib64/vendor.qti.hardware.limits@1.0.so
 
 # Thermal configs
@@ -639,13 +626,11 @@ vendor/lib64/vendor.trustonic.tee.tui@1.0.so
 # USB
 vendor/bin/hw/android.hardware.usb@1.2-service-qti
 vendor/etc/init/android.hardware.usb@1.2-service-qti.rc
--vendor/etc/vintf/manifest/android.hardware.usb@1.2-service.xml
+vendor/etc/vintf/manifest/android.hardware.usb@1.2-service.xml
 
 # Vibrator
 vendor/bin/hw/motorola.hardware.vibrator@1.0-service
 vendor/etc/init/motorola.hardware.vibrator@1.0-service.rc
-vendor/etc/init/vendor.qti.hardware.vibrator.service.rc
--vendor/etc/vintf/manifest/vendor.qti.hardware.vibrator.service.xml
 vendor/lib64/hw/motorola.hardware.vibrator@1.0-impl.so
 vendor/lib64/motorola.hardware.vibrator@1.0.so
 
@@ -653,7 +638,7 @@ vendor/lib64/motorola.hardware.vibrator@1.0.so
 vendor/bin/hw/android.hardware.wifi@1.0-service
 vendor/etc/init/android.hardware.wifi@1.0-service.rc
 vendor/etc/init/vendor.qti.hardware.wifi.wifilearner@1.0-service.rc
--vendor/etc/vintf/manifest/android.hardware.wifi@1.0-service.xml
+vendor/etc/vintf/manifest/android.hardware.wifi@1.0-service.xml
 vendor/lib64/motorola.hardware.wifi.supplicant@1.0.so
 vendor/lib64/motorola.hardware.wifi.supplicant@1.0_vendor.so
 vendor/lib64/motorola.hardware.wifi.supplicant@1.1.so
@@ -716,7 +701,6 @@ vendor/etc/diag_mdlog/Wlan_V2.cfg
 vendor/etc/diag_mdlog/default.cfg
 vendor/etc/diag_mdlog/default.opts
 vendor/etc/diag_mdlog/diag-adsp-bm.cfg
-vendor/etc/init/boringssl_self_test.rc
 vendor/etc/init/init.embmssl_server.rc
 vendor/etc/init/init.gf_ident.rc
 vendor/etc/init/init.qdmastats.rc
@@ -732,10 +716,7 @@ vendor/etc/init/qguard.rc
 vendor/etc/init/qmipriod.debug.rc
 vendor/etc/init/tzlogd.rc
 vendor/etc/init/vendor.mmi.carrier.rc
-vendor/etc/init/vendor.qti.audio-adsprpc-service.rc
 vendor/etc/init/vendor.qti.psiclient@1.0-service.rc
-vendor/etc/init/vendor_flash_recovery.rc
-vendor/etc/init/vndservicemanager.rc
 vendor/etc/media_blair/video_system_specs.json
 vendor/etc/media_blair_lite/video_system_specs.json
 vendor/etc/motorola/12m/batch/camera_ant_auto/2412_wifi.lua
@@ -788,10 +769,9 @@ vendor/etc/motorola/tcmd/cid_template.unlocked
 vendor/etc/seccomp_policy/gnss@2.0-xtwifi-client.policy
 vendor/etc/seccomp_policy/gnss@2.0-xtwifi-inet-agent.policy
 vendor/etc/tetras/portrait_repair_composite.model
--vendor/etc/vintf/manifest/manifest.xml
--vendor/etc/vintf/manifest/manifest_IMoto_Fingerprint.xml
--vendor/etc/vintf/manifest/motorola.hardware.power.service.xml
--vendor/etc/vintf/manifest/power.xml
+vendor/etc/vintf/manifest/manifest.xml
+vendor/etc/vintf/manifest/manifest_IMoto_Fingerprint.xml
+vendor/etc/vintf/manifest/motorola.hardware.power.service.xml
 vendor/etc/DxHDCP.cfg
 vendor/etc/SVIConfig.xml
 vendor/etc/ap_gain.bin
@@ -804,12 +784,10 @@ vendor/etc/bt_stack_debug.conf
 vendor/etc/bt_stack_level6.conf
 vendor/etc/cacert_location.pem
 vendor/etc/excluded-input-devices.xml
-vendor/etc/fstab.qcom
 vendor/etc/fstab_zramwriteback.qcom
 vendor/etc/gpfspath_oem_config.xml
 vendor/etc/init.qti.fm.sh
 vendor/etc/nfc_calibration.txt
-vendor/etc/public.libraries.txt
 vendor/etc/qguard.json
 vendor/etc/simlock_template.dat
 vendor/etc/smomo_setting.xml
