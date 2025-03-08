@@ -7,11 +7,32 @@
 # A/B
 TARGET_IS_VAB := true
 
-# Enable updating of APEXes
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+# Boot animation
+TARGET_SCREEN_HEIGHT := 1612
+TARGET_SCREEN_WIDTH := 720
+
+# Screen
+TARGET_SCREEN_DENSITY := 280
+
+# AAPT
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := 280dpi
+PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
+
+# API levels
+PRODUCT_SHIPPING_API_LEVEL := 34
 
 # Inherit from motorola sm7325-common
 $(call inherit-product, device/motorola/sm7325-common/common.mk)
+
+# Overlays
+PRODUCT_PACKAGES += \
+    FrameworksResFogo \
+    LineagePlatformFogo \
+    LineageSystemUIFogo \
+    SettingsResFogo \
+    SystemUIResFogo \
+    WifiResFogo
 
 PRODUCT_PACKAGES += \
     update_engine \
@@ -28,9 +49,6 @@ PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
 
-# API levels
-PRODUCT_SHIPPING_API_LEVEL := 34
-
 # ANT
 PRODUCT_PACKAGES += \
     com.dsi.ant@1.0
@@ -40,75 +58,23 @@ PRODUCT_PACKAGES += \
     libqcompostprocbundle \
     libvolumelistener
 
-AUDIO_HAL_DIR := hardware/qcom-caf/sm8350/audio
-
-# Battery
-
-# Bluetooth
-PRODUCT_PACKAGES += \
-    libqti_vndfwk_detect \
-    vendor.qti.hardware.bluetooth_audio@2.0 \
-    vendor.qti.hardware.bluetooth_audio@2.1 \
-    vendor.qti.hardware.btconfigstore@1.0 \
-    vendor.qti.hardware.btconfigstore@2.0
-
-# Camera
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.camera.postproc@1.0
-
-# Configstore
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.capabilityconfigstore@1.0
-
-# Display
-PRODUCT_PACKAGES += \
-    vendor.display.config@1.0 \
-    vendor.display.config@1.1 \
-    vendor.display.config@1.10 \
-    vendor.display.config@1.11 \
-    vendor.display.config@1.12 \
-    vendor.display.config@1.13 \
-    vendor.display.config@1.14 \
-    vendor.display.config@1.15 \
-    vendor.display.config@1.2 \
-    vendor.display.config@1.3 \
-    vendor.display.config@1.4 \
-    vendor.display.config@1.5 \
-    vendor.display.config@1.6 \
-    vendor.display.config@1.7 \
-    vendor.display.config@1.8 \
-    vendor.display.config@1.9 \
-    vendor.display.config@2.0 \
-    vendor.qti.hardware.display.allocator-service \
-    vendor.qti.hardware.display.allocator@1.0 \
-    vendor.qti.hardware.display.allocator@3.0 \
-    vendor.qti.hardware.display.allocator@4.0 \
-    vendor.qti.hardware.display.composer@1.0 \
-    vendor.qti.hardware.display.composer@2.0 \
-    vendor.qti.hardware.display.composer@3.0 \
-    vendor.qti.hardware.display.mapper@1.0 \
-    vendor.qti.hardware.display.mapper@1.1 \
-    vendor.qti.hardware.display.mapper@2.0 \
-    vendor.qti.hardware.display.mapper@3.0 \
-    vendor.qti.hardware.display.mapper@4.0 \
-    vendor.qti.hardware.display.mapperextensions@1.0 \
-    vendor.qti.hardware.display.mapperextensions@1.1 \
-    vendor.qti.hardware.display.mapperextensions@1.2 \
-    vendor.qti.hardware.display.mapperextensions@1.3
-
 # Face
 PRODUCT_PACKAGES += \
     libcamera2ndk_vendor
 
-# Perf
+# Fingerprint
 PRODUCT_PACKAGES += \
-    libqti-perfd-client \
-    vendor.qti.hardware.perf@2.0 \
-    vendor.qti.hardware.perf@2.1 \
-    vendor.qti.hardware.perf@2.2
+    android.hardware.biometrics.fingerprint@2.1-service.fogo
 
-# Product characteristics
-PRODUCT_CHARACTERISTICS := default
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.lights-service.fogo
+
+# NFC
+PRODUCT_PACKAGES += \
+    android.hardware.nfc@1.2-service.st \
+    com.android.nfc_extras \
+    Tag
 
 # Rootdir
 PRODUCT_PACKAGES += \
@@ -125,40 +91,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
 
-# Service tracker
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.servicetracker@1.0 \
-    vendor.qti.hardware.servicetracker@1.1 \
-    vendor.qti.hardware.servicetracker@1.2
-
 # Touch
 PRODUCT_PACKAGES += \
     com.motorola.hardware.biometric.fingerprint@1.0 \
     vendor.lineage.touch@1.0-service.fogo
 
-# Wifi
-PRODUCT_PACKAGES += \
-    hostapd \
-    vendor.qti.hardware.wifi.supplicant@1.0 \
-    vendor.qti.hardware.wifi.supplicant@2.0 \
-    vendor.qti.hardware.wifi.supplicant@2.1 \
-    vendor.qti.hardware.wifi.supplicant@2.2
-
-# Unorganized
-PRODUCT_PACKAGES += \
-    libgpu_tonemapper \
-    libgralloccore \
-    libgrallocutils \
-    libqdutils \
-    libqservice \
-    libsdmcore \
-    libtinyxml \
-    libvulkan
-
 # Soong namespaces
-PRODUCT_SOONG_NAMESPACES += \
-    hardware/motorola \
-    hardware/lineage/interfaces/power-libperfmgr \
+PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/motorola/fogo/fogo-vendor.mk)

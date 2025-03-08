@@ -1,0 +1,24 @@
+//
+// SPDX-FileCopyrightText: 2017 The Android Open Source Project
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_binary {
+    name: "android.hardware.biometrics.fingerprint@2.1-service.fogo",
+    vintf_fragments: ["android.hardware.biometrics.fingerprint@2.1-service.fogo.xml"],
+    init_rc: ["android.hardware.biometrics.fingerprint@2.1-service.fogo.rc"],
+    defaults: ["hidl_defaults"],
+    relative_install_path: "hw",
+    srcs: ["service.cpp", "BiometricsFingerprint.cpp"],
+    shared_libs: [
+        "libbase",
+        "libhardware",
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+        "android.hardware.biometrics.fingerprint@2.1",
+    ],
+    proprietary: true,
+}
