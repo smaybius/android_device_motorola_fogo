@@ -82,7 +82,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
-    init.recovery.qcom.rc \
 
 # Sensors
 PRODUCT_PACKAGES += \
