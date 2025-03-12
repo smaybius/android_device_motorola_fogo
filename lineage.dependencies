@@ -4,8 +4,8 @@
     "target_path": "hardware/motorola"
   },
   {
-    "repository": "android_kernel_motorola_sm4375",
-    "target_path": "kernel/motorola/sm4375"
+    "repository": "android_kernel_motorola_sm7325",
+    "target_path": "kernel/motorola/sm7325"
   },
   {
     "repository": "android_device_motorola_sm7325-common",
