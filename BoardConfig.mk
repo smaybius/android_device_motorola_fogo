@@ -26,7 +26,7 @@ DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 
 # Kernel
 BOARD_KERNEL_CMDLINE += androidboot.hab.product=fogo
-TARGET_KERNEL_CONFIG := fogo_defconfig
+TARGET_KERNEL_CONFIG += vendor/lineage_fogo.config
 
 # Kernel Modules
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load))
