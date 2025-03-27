@@ -194,8 +194,6 @@ watchdogtest.ko
 qpnp_adaptive_charge.ko
 goodix_fod_mmi.ko
 fpc1020_mmi.ko
-sensors_class.ko
-mmi_relay.ko
 sx937x_sar.ko
 awinic_sar.ko
 mmi_sys_temp.ko
