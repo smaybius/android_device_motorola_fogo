@@ -353,7 +353,6 @@ vendor/lib64/libOmxWmaDec.so
 vendor/lib64/libplatformconfig.so
 vendor/lib64/libstagefright_soft_qtiflacdec.so
 vendor/lib64/libstagefrighthw.so
-vendor/lib64/libwfddisplayconfig_proprietary.so
 
 # Media (Dolby)
 vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
@@ -655,8 +654,6 @@ vendor/etc/wifi/wfdr2_regex.conf
 vendor/etc/wifi/wpa_supplicant_overlay.conf
 
 # Wi-Fi Display
-vendor/lib64/libDxHdcp.so
-vendor/lib64/libmm-hdcpmgr.so
 vendor/lib64/vendor.qti.hardware.sigma_miracast@1.0.so
 
 # Miscellaneous
@@ -875,25 +872,13 @@ vendor/lib64/libpasrutils.so
 vendor/lib64/libpn557_fw.so
 vendor/lib64/libportrait_repair_ppl3_ocl.so
 vendor/lib64/libpowercallback.so
-vendor/lib64/libqc2colorconvertfilter.so
-vendor/lib64/libqc2filter.so
-vendor/lib64/libqcodec2_base.so
-vendor/lib64/libqcodec2_basecodec.so
-vendor/lib64/libqcodec2_core.so
-vendor/lib64/libqcodec2_hooks.so
-vendor/lib64/libqcodec2_mockfilter.so
-vendor/lib64/libqcodec2_platform.so
-vendor/lib64/libqcodec2_utils.so
-vendor/lib64/libqcodec2_v4l2codec.so
 vendor/lib64/libqcrildataqos.so
 vendor/lib64/libqdma_file_agent.so
 vendor/lib64/libqll10.so
 vendor/lib64/libqllengine.so
 vendor/lib64/libqmi_csvt_srvc.so
 vendor/lib64/libqmiextservices.so
-vendor/lib64/libqtbase.so
 vendor/lib64/libqtjsonhelper.so
-vendor/lib64/libqtnodes.so
 vendor/lib64/librecovery_updater.so
 vendor/lib64/librecovery_updater_msm.so
 vendor/lib64/libreffeature.so
